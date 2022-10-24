@@ -85,3 +85,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/Window/open
 </html>
 쌤
 https://git-scm.com/book/ko/v2
+
+https://www.w3schools.com/cssref/css_selectors.asp
+
+https://opentutorials.org/module/484/4149

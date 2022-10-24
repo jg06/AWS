@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+  <html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>CSS 개요</title>
+      <style>
+        /* 내부 스타일 시트 */
+        p {
+          color: red;
+          text-decoration: underline;
+        }
+      </style>
+      <!-- 외부 스타일시트 -->
+      <link rel="stylesheet" href="initcss.css">
+    </head>
+    <body>
+      <h3>CSS 개요</h3>
+      <p style="color:chartreuse;text-decoration-style:dashed;text-decoration-thickness: 1px;
+      text-decoration-line:underline ;">인라인 스타일시트</p>
+      <p>내부 스타일시트</p>
+      <p>외부 스타일시트</p>
+      <p>기본적으로 선택자가 같으면 아래의 선택자가 적용</p>
+      <p>스타일 우선순위</p>
+      <ol>
+        <li>사용자 스타일(os에서 적용)</li>
+        <li>제작자 스타일(css에서 적용)</li>
+        <li>브라우저 스타일(브자우저에서 적용)</li>
+      </ol>
+      <hr>
+      <h3>제작자 스타일 시트</h3>
+      <p><a href="https://opentutorials.org/module/484/4149" target="_blank">우선순위 계산</a></p>
+      <ol>
+        <li>!important</li>
+        <li>인라인 스타일시트(1000)</li>
+        <li>ID 선택자(100)</li>
+        <li>Class 선택자(10) / 가상선택자</li>
+        <li>Tag 선택자(1)</li>
+      </ol>
+      <style></style>
+    </body>
+</html>
