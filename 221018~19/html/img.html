@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+  <html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>이미지</title>
+      <link rel="stylesheet" href="CSS/img.css">
+    </head>
+    <body>
+      <a href="https://www.google.com/search?q=유재석" target="_blank">
+        <img src="http://talkimg.imbc.com/TVianUpload/tvian/TViews/image/2016/10/31/e1f20f9b-1ee3-478a-a3a0-ca16ee82b9f8.gif" alt="유재석" class="firstImage">
+      </a>
+      <hr>
+      <h3>이미지 맵</h3>
+      <blockquote cite="https://www.w3schools.com/html/html_images_imagemap.asp">HTML 이미지 맵을 사용하면 이미지에 클릭 가능한 영역을 만들 수 있습니다.</blockquote>
+      <img src="/img/a.png" alt="text" usemap="#mymap">
+      <map name="mymap">
+        <area shape="rect" coords="0,0,50,50" href="http://www.naver.com" alt="네이버" target="_blank">
+        <area shape="rect" coords="50,50,100,100" href="http://www.daum.net" alt="네이버" target="_blank">
+        <area shape="circle" coords="150,150,50" href="http://www.naver.com" alt="네이버" target="_blank">
+        <area shape="poly" coords="150,0, 100,150, 200, 150" alt="네이버" target="_blank" onclick="test();" style="cursor: pointer;">
+      </map>
+      <script>
+        function test() {
+          alert('경고');
+          document.body.style.backgroundColor = 'red';
+        }  
+      </script>
+      <hr>
+      
+    </body>
+</html>

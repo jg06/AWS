@@ -1,0 +1,9 @@
+body {
+    background-image: url('/img/a.jpg');
+  }
+  
+  p {
+    height: 640px;
+    background-image: url('http://san.chosun.com/news/photo/202205/15750_66157_37.jpg'); 
+    background-repeat:no-repeat;
+  }

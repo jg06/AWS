@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+  <html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>input</title>
+    </head>
+    <body>
+      <form>
+        <input type="text" size="50" value="text" maxlength="4" readonly><br>
+        <input type="password" size="50" value="password"><br>
+        <input type="search" size="50" value="search"><br>
+        <input type="url" size="50" value="url"><br>
+        <input type="email" size="50" value="email"><br>
+        <input type="tel" size="50" value="tel"><br>
+        <fieldset>
+          <legend>취미</legend>
+          <label for="h1">수영</label>
+          <input type="checkbox" name="h1" id="h1" title="수영" value="수영" checked>
+          <label for="h2">독서</label>
+          <input type="checkbox" name="h2" id="h2" title="독서">
+          <label for="h3">음악</label>
+          <input type="checkbox" name="h3" id="h3" title="음악">
+        </fieldset>
+        <fieldset>
+          <legend>클래스</legend>
+          <label for="c1">토끼반</label>
+          <input type="radio" name="cls" id="c1">
+          <label for="c2">거북반</label>
+          <input type="radio" name="cls" id="c2" checked>
+          <label for="c3">송이반</label>
+          <input type="radio" name="cls" id="c3">
+        </fieldset>
+        <input type="submit">
+      </form>
+    </body>
+</html>
