@@ -42,8 +42,45 @@
           box-sizing: border-box;
           background-color: bisque;
         }
+        a:focus {
+          outline: 10px ridge red;
+          outline-offset: 5px;
+        }
+        .box {
+          box-shadow: 1px 1px 1px red;
+          border-radius: 50px;
+        }
       </style>
       <div class="nom">nomal</div>
       <div class="box">box-sizing</div>
+      <style>
+        .hop {
+          cursor: pointer;
+          position: relative;
+        }
+        .hop, .hop div {
+          height: auto;
+          width: auto;
+          border: none;
+          transition: 1s;
+        }
+        .hop div {
+          width: 0;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+        .hop:hover {
+          background-color: aqua;
+        }
+        .hop:hover div {
+          width: 50px;
+          border-bottom: 2px double black;
+        }
+      </style>
+      <div class="hop">
+        test
+        <div></div>
+      </div>
     </body>
 </html>
