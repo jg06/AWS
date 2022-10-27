@@ -1,0 +1,13 @@
+h1{
+    color: blue;
+}
+div{
+    div{
+        &>h3{
+            color: red;
+        }
+    }
+    &>h2{
+        color: salmon;
+    }
+}

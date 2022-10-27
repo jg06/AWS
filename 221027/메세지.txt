@@ -1,3 +1,6 @@
+https://github.com/pol-27/anchor
+
+쌤
 <!DOCTYPE html>
   <html lang="ko">
     <head>
@@ -44,3 +47,473 @@
 </html>
 쌤
 https://velog.io/@raram2/CSS-%EB%A7%88%EC%A7%84-%EC%83%81%EC%87%84Margin-collapsing-%EC%9B%90%EB%A6%AC-%EC%99%84%EB%B2%BD-%EC%9D%B4%ED%95%B4
+
+쌤
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+target=_blank>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+쌤
+<!DOCTYPE html>
+  <html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>반 나누기</title>
+      <style>
+        * {
+          margin: 0;
+          box-sizing: border-box;  
+        }
+        html, body {
+          height: 100%;
+        }
+        .wrap {
+          width: 100%;
+          height: 100%;
+        }
+        .top {
+          height: 75%;
+          overflow: hidden;
+        }
+        /* .clearfixed::after {
+          content: "";
+          display: table;
+          clear: both;
+        } */
+        .left {
+          float: left;
+          /* 넓이와 높이가 사라짐 */
+          width: 50%;
+          height: 100%;
+          background-color: red;
+        }
+        .right {
+          float: left;
+          width: 50%;
+          height: 100%;
+          background-color: green;
+        }
+        .btm {
+          height: 25%;
+          background-color: blue;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="wrap">
+        <div class="top clearfixed">
+          <div class="left"></div>
+          <div class="right"></div>
+        </div>
+        <div class="btm"></div>
+      </div>
+    </body>
+</html>
+쌤
+<!DOCTYPE html>
+  <html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>레이아웃</title>
+    </head>
+    <body>
+      <h3>레이아웃</h3>
+      <style>
+        * {
+          box-sizing: border-box;
+        }
+        nav ul {
+          list-style: none;
+        }
+        nav ul li {
+          display: inline-block;
+          padding: 20px;
+          margin: 0 20px;
+          border: 1px solid #222;
+          cursor: pointer;
+          /*
+            s - 초
+            ms - 마이크로초(1000)
+             0.4s == 400ms
+             1s == 1000ms
+          */
+          transition: 400ms;
+          transition: 0.4s;
+          transition: .4s;
+        }
+        nav ul li:hover {
+          background-color: aliceblue;
+        }
+        .float {
+          float: right;
+          width: 100px;
+          height: 100px;
+          background-color: red;
+          border: 1px solid black;
+        }
+        hr {
+          clear: both;
+        }
+        img {
+          float: right;
+          margin: 0 0 20px 20px;
+        }
+      </style>
+      <nav>
+        <ul>
+          <li>menu 1</li>
+          <li>menu 2</li>
+          <li>menu 3</li>
+          <li>menu 4</li>
+        </ul>
+      </nav>
+      <hr>
+      <h3>float</h3>
+      <p>float: 요소를 수평 배치함.</p>
+      <div class="float">1</div>
+      <div class="float">2</div>
+      <div class="float">3</div>
+      <hr>
+      <div>
+        <img src="/anchor/img/a.jpg" alt="호랑이">이전에 저는 마진 값을 어찌어찌 바꿔보면서 의도한 대로 보이면 그냥 넘어간 경우가 많았습니다. 하지만 계속된 시행착오를 막고자 이번 기회에 정리를 해봤습니다. 이것저것 찾아보다 보니 제가 잘 안다고 생각했던 것들이 결국 얕은 수준이었다는 것을 깨닫게 됐습니다.😂 넓게 아는 것과 깊게 아는 것. 그 중간을 잘 맞춰가야겠습니다.
+      </div>
+      <style>
+        .box1, .box2 {
+          width: 100px;
+          height: 100px;
+          background-color: red;
+          border: 1px solid black;
+          float: left;
+        }
+        .box1 {}
+        .box2 {}
+        .box3 {
+          height: 100px;
+          background-color: green;
+        }
+        .par {
+          background-color: blue;
+          overflow: hidden;
+        }
+        /* .par::after {
+          content: "";
+          clear: both;
+          display: table;
+        } */
+      </style>
+      <div class="par">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+      </div>
+      <div class="box3">3</div>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <style>
+    body > div {
+      /* overflow: hidden; */
+    }
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    body > div > div {
+      width: 10px;
+      height: 10px;
+      background: red;
+      float: left;
+      border: 1px solid;p
+    }
+  </style>
+  <div class="clearfix">
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>
+쌤
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <style>
+    body > div {
+      /* overflow: hidden; */
+    }
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    body > div > div {
+      width: 10px;
+      height: 10px;
+      background: red;
+      float: left;
+      border: 1px solid;p
+    }
+  </style>
+  <div class="clearfix">
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>
+쌤
+<style>
+  div {
+    position: relative;
+  }
+  div::after {
+    content: "";
+    width: 0;
+    height: 1px;
+    background: red;
+    position: absolute;
+    top:21.43px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 1s;
+  }
+  div:hover {}
+  div:hover::after {
+    width: 100%;
+  }
+</style>
+<div>test</div>
+
+<!DOCTYPE html>
+  <html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>웹 요소의 위치 지정하기</title>
+    </head>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+      }
+      .static {
+        position: static;
+        background-color: red;
+      }
+      .relative {
+        position: relative;
+        background-color: green;
+        top: 20px;
+        left: 60px;
+      }
+      .absolute {
+        /* 넓이 사라짐 */
+        position: absolute;
+        background: aqua;
+        top: 150px;
+        left: 75px;
+      }
+      .parents {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        background-color: aliceblue;
+      }
+      .fixed {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        background-color: blue;
+      }
+      .sticky {
+        position: sticky;
+        /* top값이 꼭 필요 */
+        background-color: blueviolet;
+        top: 15px;
+        left: 100px; 
+      }
+    </style>
+    <body>
+      <h3>웹 요소의 위치 지정하기</h3>
+      <p>static: 기본값이며 움직일 수 없음.</p>
+      <p>relative: 생성된 위치를 기준으로 움직임. 위치를 차지하고 있음.</p>
+      <p>absolute: 부모(부모요소에게 position값을 지정) 기준으로 움직임. 위치를 차지하지 않음.</p>
+      <p>fixed: 뷰포트 기준으로 이동, 화면에 고정</p>
+      <p>sticky: 화면의 상단이 요소의 상단에 걸리면 fixed 됨(Top값 지정)</p>
+      <div class="static">static</div>
+      <div class="relative">relative</div>
+      <div class="static">static</div>
+      <div class="parents">
+        <div class="absolute">absolute</div>
+      </div>
+      <div class="static">static</div>
+      <div class="fixed">fixed</div>
+      <div class="static">static</div>
+      <div class="sticky">sticky</div>
+      <div class="static">static</div>
+      <div class="static">static</div>
+      <div class="static">static</div>
+      <div class="static">static</div><div class="static">static</div>
+      <div class="static">static</div><div class="static">static</div>
+      <div class="static">static</div>
+      <div class="static">static</div>
+      <div class="static">static</div>
+      <div class="static">static</div>
+    </body>
+</html>
+쌤
+<!DOCTYPE html>
+  <html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>웹 요소의 위치 지정하기</title>
+    </head>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+      }
+      .static {
+        position: static;
+        background-color: red;
+      }
+      .relative {
+        position: relative;
+        background-color: green;
+        top: 20px;
+        left: 60px;
+      }
+      .absolute {
+        /* 넓이 사라짐 */
+        position: absolute;
+        background: aqua;
+        top: 150px;
+        left: 75px;
+      }
+      .parents {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        background-color: aliceblue;
+      }
+      .fixed {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        background-color: blue;
+      }
+      .sticky {
+        position: sticky;
+        /* top값이 꼭 필요 */
+        background-color: blueviolet;
+        top: 15px;
+        left: 100px; 
+      }
+      .red {
+        background-color: red;
+        top: 50px;
+        left: 50px;
+        z-index: 1;
+      }
+      .green {
+        background-color: green;
+        top: 100px;
+        left: 100px;
+        z-index: 0;
+      }
+      .blue {
+        background-color: blue;
+        top: 110px;
+        left: 110px;
+        z-index: 0;
+      }
+    </style>
+    <body>
+      <h3>웹 요소의 위치 지정하기</h3>
+      <p>static: 기본값이며 움직일 수 없음.</p>
+      <p>relative: 생성된 위치를 기준으로 움직임. 위치를 차지하고 있음.</p>
+      <p>absolute: 부모(부모요소에게 position값을 지정) 기준으로 움직임. 위치를 차지하지 않음.</p>
+      <p>fixed: 뷰포트 기준으로 이동, 화면에 고정</p>
+      <p>sticky: 화면의 상단이 요소의 상단에 걸리면 fixed 됨(Top값 지정)</p>
+      <hr>
+      <p>겹침 설정 : 기본적으로 아래 있는 요소가 위로 감.</p>
+      <p>z-index로 겹침 수정(단, 부모가 같은 요소만 지정됨.)</p>
+      <div class="static">static</div>
+      <div class="relative">relative</div>
+      <div class="static">static</div>
+      <div class="parents">
+        <div class="absolute">absolute</div>
+      </div>
+      <div class="static">static</div>
+      <div class="fixed">fixed</div>
+      <div class="static">static</div>
+      <div class="sticky">sticky</div>
+      <div class="static">static</div>
+      <div class="static">static</div>
+      <div class="static">static</div>
+      <div class="static">static</div><div class="static">static</div>
+      <div class="static">static</div><div class="static">static</div>
+      <div class="static">static</div>
+      <div class="static">static</div>
+      <div class="static">static</div>
+      <div class="static">static</div>
+      <div class="parents">
+        <div class="absolute red">1</div>
+        <div class="absolute green">2</div>
+        <div class="absolute blue">3</div>
+      </div>
+    </body>
+</html>
+
+https://poiemaweb.com/css3-layout
