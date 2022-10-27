@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+  <html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>마진</title>
+      <style>
+        /*+ : 형제 중 바로 아래 동생을 선택*/
+        h3 + p {
+          margin: 0 auto;
+          width: 75%; /*가변형*/
+        }
+        p:nth-of-type(2) {
+          text-align: center;
+        }
+        span {
+          width: 150px; 
+          margin: 0 auto;
+          /*인라인은 글자처럼 취급*/
+        }
+        div[class^=mar] {
+          height: 50px;
+          border: 1px solid red;
+        }
+        div.mar10 {
+          margin: 5px;
+        }
+        div.mar5 {
+          margin: 10px;
+        }
+      </style>
+    </head>
+    <body>
+      <h3>마진</h3>
+      <p><b>블록 요소</b>일 경우 margin: 0 auto;로 요소를 수평 가운데 정렬(단, 넓비가 지정되어 있을 경우)</p>
+      <p>
+        <span>SPAN</span>
+      </p>
+      <p>마진 상쇄: 블록 요소가 위/아래로 겹칠 경우 작은 마진은 사라짐</p>
+      <div class="mar10"></div>
+      <div class="mar5"></div>
+    </body>
+</html>
+쌤
+https://velog.io/@raram2/CSS-%EB%A7%88%EC%A7%84-%EC%83%81%EC%87%84Margin-collapsing-%EC%9B%90%EB%A6%AC-%EC%99%84%EB%B2%BD-%EC%9D%B4%ED%95%B4
