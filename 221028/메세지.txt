@@ -383,6 +383,5 @@ https://github.com/pol-27/anchor/blob/main/img/basic5.jpg
     </body>
 </html>
 쌤
-https://www.w3schools.com/CSSref/css4_pr_accent-color.php
-쌤
+
 https://www.w3schools.com/CSSref/css4_pr_accent-color.php
