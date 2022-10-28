@@ -1,5 +1,9 @@
+body {
+  background-color: black;
+}
+
 h1 {
-  color: blue;
+  color: white;
 }
 
 div div > h3 {

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+  <html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>레이아웃 연습</title>
+      <style>
+        .total-width {
+          width: 960px;
+        }
+        .float {
+          float: left;
+        }
+        .clearfix::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        .bg-color {
+          background-color: burlywood;
+        }
+        .one-width {
+          width: 238.5px;
+        }
+        .two-width {
+          width: 497px;
+        }
+        .three-width {
+          width: 719.5px;
+        }
+        .mar-bottom {
+          margin-bottom: 2px;
+        }
+        .mar-right {
+          margin-right: 2px;
+        }
+        .border-radius5 {
+          border-radius: 5px;
+        }
+        .one-height {
+          height: 100px;
+        }
+        .two-height {
+          height: 202px;
+        }
+        .three-height {
+          height: 304px;
+        }
+      </style>
+    </head>
+    <body>
+      <hr>
+      <style>
+        .wrap {
+          width: 960px;
+        }
+        .header, .footer {
+          height: 100px;
+          background: black;
+          border-radius: 5px;
+          margin-bottom: 5px;
+        }
+        .footer {
+          margin-bottom: 0;
+        }
+        /* .main {
+          overflow: hidden;
+        } */
+        .main::after, .main-right-top::after {
+          clear: both;
+          display: table;
+          content: "";
+        }
+        .main-left, .main-right {
+          float: left;
+        }
+        .main-left, .main-right-top-left, .main-right-top-middle {
+          margin-right: 5px;
+        }
+        .main-left-1, .main-left-2, .main-left-3, .main-right-top-left-1, .main-right-top-left-2, .main-right-top-left-3, .main-right-top-middle-1, .main-right-top-middle-2, .main-right-top-right-1, .main-right-top-right-2 {
+          width: 236.25px;
+          background: black;
+          border-radius: 5px;
+          height: 100px;
+          margin-bottom: 5px;
+        }
+        .main-left-3, .main-right-top-right-2 {
+          height: 205px;
+          margin-bottom: 0;
+        }
+        .main-right-top-middle-1 {
+          height: 205px;
+        }
+        .main-right-top-left-3, .main-right-top-middle-2 {
+          margin-bottom: 0;
+        }
+        .main-right-top-left, .main-right-top-middle, .main-right-top-right {
+          float: left;
+        }
+        .main-right-bottom {
+          width: 718.75px;
+          height: 100px;
+          background: black;
+          border-radius: 5px;
+        }
+        .main, .main-right-top {
+          margin-bottom: 5px;
+        }
+      </style>
+      <div class="wrap">
+        <div class="header"></div>
+        <div class="main">
+          <div class="main-left">
+            <div class="main-left-1"></div>
+            <div class="main-left-2"></div>
+            <div class="main-left-3"></div>
+          </div>
+          <div class="main-right">
+            <div class="main-right-top">
+              <div class="main-right-top-left ">
+                <div class="main-right-top-left-1"></div>
+                <div class="main-right-top-left-2"></div>
+                <div class="main-right-top-left-3"></div>
+              </div>
+              <div class="main-right-top-middle">
+                <div class="main-right-top-middle-1"></div>
+                <div class="main-right-top-middle-2"></div>
+              </div>
+              <div class="main-right-top-right">
+                <div class="main-right-top-right-1"></div>
+                <div class="main-right-top-right-2"></div>
+              </div>
+            </div>
+            <div class="main-right-bottom"></div>
+          </div>
+        </div>
+        <div class="footer"></div>
+      </div>
+    </body>
+</html>
