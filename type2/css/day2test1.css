@@ -1,0 +1,31 @@
+#container {
+  width: 1000px;
+  height: 1000px;
+  margin-left: 100px;
+}
+.wrapper {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  margin: 30px 0;
+}
+.wrapper div {
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+}
+#scale:hover {
+  transform: scale(2, 4);
+}
+#scale3d:hover {
+  transform: scale3d(2, 4, 6);
+}
+#scalex:hover {
+  transform: scaleX(2);
+}
+#scaley:hover {
+  transform: scaleY(4);
+}
+#scalez:hover {
+  transform: scaleZ(6);
+}

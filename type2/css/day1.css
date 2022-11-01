@@ -1,0 +1,16 @@
+body{
+    background-color: #c8c8c8;
+}
+#test{
+    display: flex;
+    border: 1px solid white;
+    background-color: black;
+    background-clip: padding-box;
+    width: 150px;
+    height: 150px;
+}
+#test2{
+    background: linear-gradient(90deg, red, white, red);
+    width: 140px;
+    height: 140px;
+}
