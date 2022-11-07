@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const name = prompt("이름을 입력하세요.");
+        // if (name >= "a" && name <= "z") {
+        //     alert("출입이 가능합니다!");
+        // } else {
+        //     alert("출입이 금지 되었습니다!");
+        //}
+        const regex = /^[a-z]$/;
+        if (!!name && regex.test(name)) {
+            alert("출입이 가능합니다!");
+        } else {
+            alert("출입이 금지 되었습니다!");
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/day3test1.css">
+</head>
+
+<body>
+    <div>
+        <script>
+            var i, j; let gugudan = [[], []];
+            for (i = 1; i < 9; i++) {
+                document.write("<div>");
+                document.write(`<h3>${i + 1}단</h3><hr>`)
+                for (j = 0; j < 9; j++) {
+                    gugudan[[i], [j]] = (i + 1) * (j + 1);
+                    document.write(`${i + 1}X${j + 1}=${gugudan[[i], [j]]}<br>`);
+                }
+                document.write("</div>");
+            }
+        </script>
+    </div>
+</body>
+
+</html>
