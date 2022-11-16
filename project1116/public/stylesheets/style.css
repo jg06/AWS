@@ -1,0 +1,156 @@
+@charset "utf-8";
+@import "reset.css";
+@import "font.css";
+
+.wrap {
+  display: flex;
+  flex-direction: row;
+}
+.wrap-left {
+  width: 49.4vw;
+  height: 100vh;
+  background-size: cover;
+  background-image: url(../images/Rectangle\ 1.svg);
+}
+#wrap-left-text {
+  display: flex;
+  height: 96vh;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+#wrap-left-text span {
+  width: 74.85%;
+}
+
+#wrap-left-text span:nth-child(1),
+#wrap-left-text span:nth-child(2) {
+  font-family: "NotoSans";
+  font-weight: 900;
+  font-size: 2.7vw;
+  color: #ffffff;
+}
+
+#wrap-left-text span:nth-child(2) {
+  margin-top: 5px;
+}
+
+#wrap-left-text span:nth-child(3) {
+  margin-top: 20px;
+  font-family: "NotoSans";
+  font-weight: normal;
+  font-size: 1.35vw;
+  color: #ffffff;
+}
+.wrap-right {
+  width: 50.6vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box,
+.login-box-text span,
+.id-pw,
+.id-pw input,
+.fn-box,
+#login-box,
+.sign-box {
+  min-width: 430px;
+  width: 29.86vw;
+}
+.login-box-text {
+  display: flex;
+  flex-direction: column;
+}
+.login-box-text span:nth-child(1) {
+  font-family: "NotoSans";
+  font-weight: 900;
+  font-size: 2.5vw;
+}
+.login-box-text span:nth-child(2) {
+  font-family: "NotoSans";
+  font-weight: normal;
+  font-size: 1.38vw;
+  margin-top: 12px;
+}
+.id-pw {
+  margin-top: 15px;
+}
+
+#id,
+#pw {
+  height: 48px;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 1.38vw;
+}
+
+#id:focus,
+#pw:focus {
+  outline: none;
+}
+#id::placeholder,
+#pw::placeholder {
+  font-family: "NotoSans";
+  font-weight: normal;
+  font-size: 1vw;
+  color: #4a4949;
+}
+.fn-box {
+  margin-top: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fn-box-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#fn-box-left span {
+  font-family: "NotoSans";
+  font-weight: normal;
+  font-size: 1.04vw;
+}
+#fn-box-right span {
+  font-family: "NotoSans";
+  font-weight: normal;
+  font-size: 1.04vw;
+  text-decoration: underline;
+  cursor: pointer;
+}
+#login-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: #060606;
+  border-radius: 6px;
+  margin-top: 60px;
+  cursor: pointer;
+}
+#login-box span {
+  text-align: center;
+  font-family: "NotoSans";
+  font-weight: normal;
+  font-size: 1.11vw;
+  color: white;
+}
+.sign-box {
+  margin-top: 16px;
+  text-align: center;
+}
+.sign_box span:nth-child(1) {
+  font-family: "NotoSans";
+  font-weight: normal;
+  font-size: 1.11vw;
+}
+.sign-box span:nth-child(2) {
+  font-family: "NotoSans";
+  font-weight: 500;
+  font-size: 1.11vw;
+  text-decoration: underline;
+  cursor: pointer;
+}
