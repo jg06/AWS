@@ -1,5 +1,6 @@
 @import "reset.css";
 @import "font.css";
+
 html {
   min-width: 700px;
 }
