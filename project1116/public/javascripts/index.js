@@ -64,7 +64,7 @@ document.getElementById("find_submit").addEventListener("click", () => {
 
 document.getElementById("sign-up").addEventListener("click", () => {
   const loginBox = document.getElementsByClassName("login-box")[0];
-  const signbox = document.getElementsByClassName("signup-box")[0];
+  const signBox = document.getElementsByClassName("signup-box")[0];
 
   loginBox.style.transition = "all 1s linear";
   loginBox.style.transform = "scale(0.5)";
@@ -74,27 +74,27 @@ document.getElementById("sign-up").addEventListener("click", () => {
   }, 1000);
 
   setTimeout(() => {
-    signbox.style.display = "block";
-    signbox.style.opacity = 0;
-    signbox.style.transform = "scale(0.5)";
+    signBox.style.display = "block";
+    signBox.style.opacity = 0;
+    signBox.style.transform = "scale(0.5)";
   }, 1100);
 
   setTimeout(() => {
-    signbox.style.transition = "all 1s linear";
-    signbox.style.opacity = 1;
-    signbox.style.transform = "scale(1)";
+    signBox.style.transition = "all 1s linear";
+    signBox.style.opacity = 1;
+    signBox.style.transform = "scale(1)";
   }, 1200);
 });
 
 document.getElementById("signup-arrow").addEventListener("click", () => {
   const loginBox = document.getElementsByClassName("login-box")[0];
-  const signbox = document.getElementsByClassName("signup-box")[0];
+  const signBox = document.getElementsByClassName("signup-box")[0];
 
-  signbox.style.transition = "all 1s linear";
-  signbox.style.transform = "scale(0.5)";
-  signbox.style.opacity = 0;
+  signBox.style.transition = "all 1s linear";
+  signBox.style.transform = "scale(0.5)";
+  signBox.style.opacity = 0;
   setTimeout(() => {
-    signbox.style.display = "none";
+    signBox.style.display = "none";
   }, 1000);
 
   setTimeout(() => {
@@ -109,18 +109,23 @@ document.getElementById("signup-arrow").addEventListener("click", () => {
     loginBox.style.transform = "scale(1)";
   }, 1200);
 });
-
+let condition = 0;
 document.getElementById("signup-submit").addEventListener("click", () => {
   const submitBtn = document.getElementById("signup-submit");
 
   submitBtn.style.transition = "transform 1s linear";
 
-  if (document.getElementById("sign_email").value) {
+  if (document.getElementById("sign_email").value && condition === 0) {
+    condition += 1;
     document.getElementById("sign_valid").style.visibility = "visible";
     submitBtn.style.transform = "translateY(-240px)";
   }
 
-  if (document.getElementById("sign_valid").value.length === 6) {
+  if (
+    document.getElementById("sign_valid").value.length === 6 &&
+    condition === 1
+  ) {
+      condition += 1;
     document.getElementById("sign_pw").style.visibility = "visible";
     submitBtn.style.transform = "translateY(-175px)";
 

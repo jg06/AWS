@@ -10,6 +10,7 @@
   width: 49.44vw;
   height: 100vh;
   background-image: url(../images/Rectangle\ 1.svg);
+  background-size: cover;
 }
 
 .wrap-left-text span:nth-child(1),
@@ -27,7 +28,7 @@
 .wrap-left-text span:nth-child(3) {
   font-family: "NotoSans";
   font-weight: normal;
-  font-size: 1.38vw;
+  font-size: 1.2vw;
   color: #ffffff;
   margin-top: 20px;
 }
@@ -79,7 +80,7 @@
 .header span:nth-child(2) {
   font-family: "NotoSans";
   font-weight: normal;
-  font-size: 1.38vw;
+  font-size: 1.33vw;
   margin-top: 12px;
 }
 
