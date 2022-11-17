@@ -1,6 +1,8 @@
 @import "reset.css";
 @import "font.css";
-
+html {
+  min-width: 700px;
+}
 .wrap {
   display: flex;
   flex-direction: row;
@@ -50,6 +52,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 450px;
 }
 
 .wrap-right-box {
