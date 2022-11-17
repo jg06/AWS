@@ -10,6 +10,7 @@
     "debug": "~2.6.9",
     "dotenv": "^16.0.3",
     "express": "~4.16.1",
+    "mariadb": "^3.0.2",
     "morgan": "~1.9.1",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.1"

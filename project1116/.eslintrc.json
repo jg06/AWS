@@ -3,7 +3,7 @@
     "browser": true,
     "es6": true
   },
-  "extends": ["airbnb-base", "plugin:prettier/recommended"],
+  "extends": ["airbnb-base", "prettier"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -12,14 +12,5 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "rules": {
-    "prettier/prettier": [
-      "error",
-      {
-        "singleQuote": false,
-        "parser": "flow",
-        "endOfLine": "LF"
-      }
-    ]
-  }
+  "rules": {}
 }

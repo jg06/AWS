@@ -1,4 +1,3 @@
-@charset "utf-8";
 @import "reset.css";
 @import "font.css";
 
@@ -6,151 +5,224 @@
   display: flex;
   flex-direction: row;
 }
+
 .wrap-left {
-  width: 49.4vw;
+  width: 49.44vw;
   height: 100vh;
-  background-size: cover;
   background-image: url(../images/Rectangle\ 1.svg);
 }
-#wrap-left-text {
-  display: flex;
-  height: 96vh;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
+
+.wrap-left-text span:nth-child(1),
+.wrap-left-text span:nth-child(2) {
+  font-family: "NotoSans";
+  font-weight: 900;
+  font-size: 2.77vw;
+  color: #ffffff;
 }
-#wrap-left-text span {
+
+.wrap-left-text span:nth-child(2) {
+  margin-top: 10px;
+}
+
+.wrap-left-text span:nth-child(3) {
+  font-family: "NotoSans";
+  font-weight: normal;
+  font-size: 1.38vw;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.wrap-left-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  height: 94vh;
+}
+
+.wrap-left-text span {
   width: 74.85%;
 }
 
-#wrap-left-text span:nth-child(1),
-#wrap-left-text span:nth-child(2) {
-  font-family: "NotoSans";
-  font-weight: 900;
-  font-size: 2.7vw;
-  color: #ffffff;
-}
-
-#wrap-left-text span:nth-child(2) {
-  margin-top: 5px;
-}
-
-#wrap-left-text span:nth-child(3) {
-  margin-top: 20px;
-  font-family: "NotoSans";
-  font-weight: normal;
-  font-size: 1.35vw;
-  color: #ffffff;
-}
 .wrap-right {
-  width: 50.6vw;
+  width: 50.56vw;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.login-box,
-.login-box-text span,
-.id-pw,
-.id-pw input,
-.fn-box,
-#login-box,
-.sign-box {
-  min-width: 430px;
-  width: 29.86vw;
-}
-.login-box-text {
+.wrap-right-box {
   display: flex;
   flex-direction: column;
 }
-.login-box-text span:nth-child(1) {
+
+.wrap-right-box,
+.header span,
+.input-box input,
+.fn_box,
+.login_box,
+.sign_box {
+  min-width: 430px;
+  width: 59.06%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header span:nth-child(1) {
   font-family: "NotoSans";
   font-weight: 900;
   font-size: 2.5vw;
 }
-.login-box-text span:nth-child(2) {
+.header span:nth-child(2) {
   font-family: "NotoSans";
   font-weight: normal;
   font-size: 1.38vw;
   margin-top: 12px;
 }
-.id-pw {
-  margin-top: 15px;
-}
 
-#id,
-#pw {
+/* #id, #pw */
+.input-box input {
   height: 48px;
   border: none;
   border-bottom: 1px solid #e0e0e0;
   font-size: 1.38vw;
 }
 
-#id:focus,
-#pw:focus {
+.input-box input:nth-child(1) {
+  margin-top: 21px;
+}
+
+/* 1번말고 나머지는 margin-top: 15px */
+.input-box input:not(:nth-child(1)) {
+  margin-top: 15px;
+}
+
+.input-box input:focus {
   outline: none;
 }
-#id::placeholder,
-#pw::placeholder {
+
+.input-box input::placeholder {
   font-family: "NotoSans";
   font-weight: normal;
-  font-size: 1vw;
-  color: #4a4949;
+  font-size: 1.38vw;
+  color: #000000;
 }
-.fn-box {
+
+.fn_box {
   margin-top: 17px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.fn-box-left {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#fn-box-left span {
+
+.fn_box_left span {
   font-family: "NotoSans";
   font-weight: normal;
   font-size: 1.04vw;
 }
-#fn-box-right span {
+
+.fn_box_right span {
   font-family: "NotoSans";
   font-weight: normal;
   font-size: 1.04vw;
   text-decoration: underline;
   cursor: pointer;
 }
-#login-box {
+
+.submit-btn {
+  margin-top: 61px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60px;
   background-color: #060606;
   border-radius: 6px;
-  margin-top: 60px;
   cursor: pointer;
 }
-#login-box span {
-  text-align: center;
+
+.submit-btn span {
   font-family: "NotoSans";
   font-weight: normal;
   font-size: 1.11vw;
   color: white;
 }
-.sign-box {
+
+.sign_box {
   margin-top: 16px;
   text-align: center;
 }
+
 .sign_box span:nth-child(1) {
   font-family: "NotoSans";
   font-weight: normal;
   font-size: 1.11vw;
 }
-.sign-box span:nth-child(2) {
+
+.sign_box span:nth-child(2) {
   font-family: "NotoSans";
   font-weight: 500;
   font-size: 1.11vw;
   text-decoration: underline;
   cursor: pointer;
+}
+
+.fn_box_left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.find_box {
+  display: none;
+}
+
+.icono-arrow1-left {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.icono-arrow1-left::after,
+.icono-arrow1-left::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  left: 3px;
+}
+.icono-arrow1-left::after {
+  width: 16px;
+  height: 16px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(45deg);
+  bottom: 7px;
+}
+.icono-arrow1-left::before {
+  width: 24px;
+  height: 2px;
+  bottom: 14px;
+  background: currentColor;
+}
+
+.visi-hidden {
+  visibility: hidden;
+}
+
+#find_submit {
+  transform: translateY(-175px);
+}
+.signup-box {
+  display: none;
+}
+
+#signup-submit {
+  transform: translateY(-300px);
 }
