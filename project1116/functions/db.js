@@ -1,4 +1,4 @@
-import mariadb from "mariadb";
+const mariadb = require("mariadb");
 
 async function asyncSQL(sql) {
   const conn = await mariadb.createConnection({
@@ -19,4 +19,4 @@ async function asyncSQL(sql) {
   }
 }
 
-export default asyncSQL;
+module.exports = asyncSQL;
