@@ -73,6 +73,8 @@ router.get("/auth_valid", (req, res) => {
   );
 });
 
+// 동일한 이메일이 있을때 가입 X
+
 router.post("/register", (req, res) => {
   const { email, pwd, nick, name } = req.body;
   const encryptPwd = encrypt(pwd);
