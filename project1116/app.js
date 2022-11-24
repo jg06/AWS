@@ -8,6 +8,7 @@ require("dotenv").config();
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const boardRouter = require("./routes/board");
+const commentRouter = require("./routes/comment");
 
 const app = express();
 
@@ -21,5 +22,6 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/board", boardRouter);
+app.use("/comment", commentRouter);
 
 module.exports = app;
