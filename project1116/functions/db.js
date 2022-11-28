@@ -1,18 +1,23 @@
 const mariadb = require("mariadb/callback");
 
 function asyncSQL(sql, callback) {
+  console.log(sql);
   const conn = mariadb.createConnection({
     host: process.env.host,
     user: process.env.user,
     password: process.env.password,
     port: process.env.dbport,
     database: process.env.database,
+    // SELECT COUNT를 했을 때 숫자로 받는 법
+    supportBigNumbers: true,
+    bigNumberStrings: true,
   });
 
   conn.query(sql, (err, rows) => {
+    console.log(rows);
     callback(err, rows);
     conn.end();
-  })
+  });
 }
 
 // async function asyncSQL(sql) {

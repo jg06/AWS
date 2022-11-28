@@ -66,6 +66,7 @@ function makeBoard(bid, nick, date, content, sort = "DESC") {
   div1_3_1.addEventListener("click", () => {
     location.href = `http://localhost:3000/detail.html?bid=${bid}`;
   });
+
   div1_3.append(div1_3_1);
 
   div1.append(div1_1, div1_2, div1_3);
