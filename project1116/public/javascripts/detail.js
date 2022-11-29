@@ -285,3 +285,15 @@ function getTime(date) {
 
   return `${year}-${month}-${day} ${hh}:${mm} (${val})`;
 }
+
+const home = document.getElementById("home");
+home.addEventListener("click", () => {
+  location.href = "http://localhost:3000/main.html";
+});
+
+const profile = document.getElementById("profile");
+profile.addEventListener("click", () => {
+  location.href = `http://localhost:3000/profile.html?uid=${sessionStorage.getItem(
+    "id"
+  )}`;
+});

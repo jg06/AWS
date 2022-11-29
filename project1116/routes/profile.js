@@ -4,7 +4,7 @@ const asyncSQL = require("../functions/db");
 const router = express.Router();
 
 // 프로필 조회
-// 이름, 닉네임, 팔로워, 팔로잉, 글, 댓글(본인만 보이게)
+// 이름, 닉네임, 팔로워, 팔로잉
 router.get("/get/:uid", (req, res) => {
   const { uid } = req.params;
   const { getId } = req.query;
@@ -88,7 +88,7 @@ router.get("/get/:uid", (req, res) => {
                               nick: rows[0].u_nick,
                               follower: rows1[0].follower,
                               following: rows2[0].following,
-                              isFolloow: true,
+                              isFollow: true,
                             },
                           });
                         } else {
@@ -206,12 +206,12 @@ router.post("/follow", (req, res) => {
 
   asyncSQL(
     `
-    SELECT
-      f_id
-    FROM follow
-    WHERE f_er = ${follower} 
-      AND f_ing = ${following};
-  `,
+      SELECT
+        f_id
+      FROM follow
+      WHERE f_er = ${follower} 
+        AND f_ing = ${following};
+    `,
     (err, rows) => {
       if (err) {
         res.status(500).json({

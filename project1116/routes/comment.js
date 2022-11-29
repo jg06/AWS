@@ -51,6 +51,46 @@ router.get("/get/:bid", (req, res) => {
   );
 });
 
+router.get("/get/user/:uid", (req, res) => {
+  const { uid } = req.params;
+  let { page, count } = req.query;
+  if (!uid) res.status(400).end();
+  if (!page) page = 0;
+  if (!count) count = 5;
+
+  asyncSQL(
+    `
+    SELECT
+      c.c_id as cid,
+      u.u_id as uid,
+      u.u_nick as nick,
+      c.c_content as content,
+      c.c_date as date
+    FROM comment c JOIN user u
+    ON c.c_uid = u.u_id
+    WHERE c.c_uid = "${uid}"
+    ORDER BY c.c_date DESC
+    LIMIT ${page * count}, ${count}
+  `,
+    (err, rows) => {
+      if (err) {
+        res.status(500).json({
+          status: "fail",
+          message: "서버에서 에러가 발생 하였습니다.",
+        });
+        if (process.env.NODE_ENV === "development") {
+          console.error(err);
+        }
+      } else {
+        res.status(200).json({
+          status: "success",
+          content: rows,
+        });
+      }
+    }
+  );
+});
+
 // 댓글 작성
 router.post("/write", (req, res) => {
   const { userId, content, bid } = req.body;
@@ -193,6 +233,36 @@ router.delete("/delete/:cid", (req, res) => {
         }
       } else {
         res.status(403).end();
+      }
+    }
+  );
+});
+
+router.get("/get/count/:uid", (req, res) => {
+  const { uid } = req.params;
+  if (!uid) res.status(400).end();
+
+  asyncSQL(
+    `
+    SELECT
+      COUNT (c_id) as count
+    FROM comment
+    WHERE c_uid = ${uid};
+  `,
+    (err, rows) => {
+      if (err) {
+        res.status(500).json({
+          status: "fail",
+          message: "서버에서 에러가 발생 하였습니다.",
+        });
+        if (process.env.NODE_ENV === "development") {
+          console.error(err);
+        }
+      } else {
+        res.status(200).json({
+          status: "success",
+          count: rows[0].count,
+        });
       }
     }
   );

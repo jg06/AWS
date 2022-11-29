@@ -80,9 +80,11 @@ function makeBoard(bid, nick, date, content, sort = "DESC") {
 
 function getUserList(userId, pageIndex, limit, callback) {
   const xhr = new XMLHttpRequest();
+  console.log(xhr.status);
 
   xhr.onload = () => {
     if (xhr.status === 200) {
+      console.log(xhr.status);
       const response = JSON.parse(xhr.responseText);
       if (response.content.length < 10) {
         isEnd = true;
@@ -157,7 +159,6 @@ function getTime(date) {
   const pass = now.getTime() - dt.getTime();
 
   let val = "";
-  console.log(pass);
   switch (true) {
     case pass >= 31536000000:
       val = `${Math.floor(pass / 31536000000)}년 전`;
@@ -184,3 +185,15 @@ function getTime(date) {
 
   return `${year}-${month}-${day} ${hh}:${mm} (${val})`;
 }
+
+const home = document.getElementById("home");
+home.addEventListener("click", () => {
+  location.href = "http://localhost:3000/main.html";
+});
+
+const profile = document.getElementById("profile");
+profile.addEventListener("click", () => {
+  location.href = `http://localhost:3000/profile.html?uid=${sessionStorage.getItem(
+    "id"
+  )}`;
+});

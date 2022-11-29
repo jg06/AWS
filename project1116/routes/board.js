@@ -37,12 +37,11 @@ router.post("/write", (req, res) => {
 // http://localhost:3000/boadrd/get/1
 router.get("/get/:uid", (req, res) => {
   const { uid } = req.params;
-  let { page, count } = req.query; // 페이징 관련 변수 받기
+  let { page, count } = req.query;
   if (!uid) {
     res.status(400).end();
   }
   if (!count) {
-    // count와 page 기본 값 설정
     count = 10;
   }
   if (!page || page < 1) {
@@ -193,7 +192,7 @@ router.get("/get/board/:bid", (req, res) => {
       if (err) {
         res.status(500).json({
           status: "fail",
-          mesage: "서버에서 에러가 발생 하였습니다.",
+          message: "서버에서 에러가 발생 하였습니다.",
         });
         if (process.env.NODE_ENV === "development") {
           console.error(err);
@@ -211,6 +210,36 @@ router.get("/get/board/:bid", (req, res) => {
         res.status(200).json({
           status: "fail",
           message: "데이터가 없습니다.",
+        });
+      }
+    }
+  );
+});
+
+router.get("/get/count/:uid", (req, res) => {
+  const { uid } = req.params;
+  if (!uid) res.status(400).end();
+
+  asyncSQL(
+    `
+    SELECT
+      COUNT (b_id) as count
+    FROM board
+    WHERE b_uid = ${uid};
+  `,
+    (err, rows) => {
+      if (err) {
+        res.status(500).json({
+          status: "fail",
+          message: "서버에서 에러가 발생 하였습니다.",
+        });
+        if (process.env.NODE_ENV === "development") {
+          console.error(err);
+        }
+      } else {
+        res.status(200).json({
+          status: "success",
+          count: rows[0].count,
         });
       }
     }

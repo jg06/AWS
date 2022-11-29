@@ -45,6 +45,7 @@ router.get("/auth_valid", (req, res) => {
   asyncSQL(
     `SELECT a_id, a_digit FROM auth WHERE a_email = "${email}" AND a_is_used = 0 ORDER BY a_id DESC LIMIT 1`,
     (err, rows) => {
+      console.log(rows);
       if (err || rows.length < 1) {
         res
           .status(500)
