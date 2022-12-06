@@ -15,17 +15,17 @@
   background-color: orange;
 }
 #translate:hover {
-  transform: translate(50px, 50px);
+  transform: translate(150px, 150px);
 }
 #translatex:hover {
-  transform: translateX(50px);
+  transform: translateX(150px);
 }
 #translatey:hover {
-  transform: translateY(50px);
+  transform: translateY(150px);
 }
 #translate3d:hover {
-  transform: translate3d(10px, -50px, 500px);
+  transform: translate3d(110px, -150px, 1500px);
 }
 #translatez:hover {
-  transform: translateZ(500px);
+  transform: translateZ(1500px);
 }

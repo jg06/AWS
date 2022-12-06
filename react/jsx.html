@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div id="root"></div>
+</body>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    const root = document.getElementById("root");
+    // const span = React.createElement("span", { id: "text" }, "글자");
+    const Span = () => {
+        return <span>글자</span>;
+    };
+    // const Span = () => <span>글자</span>;
+    function click() {
+        console.log("클릭");
+    }
+    // const btn = React.createElement(
+    //   "button",
+    //   {
+    //     id: "button",
+    //     style: { color: "red" },
+    //     onClick: click,
+    //   },
+    //   "클릭"
+    // );
+    const Btn = () => {
+        return (
+            <button style={{ color: "red" }} onClick={click}>
+                클릭
+            </button>
+        );
+    };
+
+    // const style = {
+    //   color: "red",
+    // };
+    // <button style={style}></button>;
+    // <button
+    //   style={{
+    //     color: "red",
+    //   }}
+    //   onClick={click}
+    // ></button>;
+
+    // const add = function (v1, v2) {
+    //     v1+v2
+    // }
+    // undefined
+    // add(1,2)
+    // undefined
+    // const add = function (v1, v2) {
+    //     return v1+v2
+    // }
+    // undefined
+    // add(1,2)
+    // 3
+    // const add = (v1, v2) => {
+    //     return v1+v2
+    // }
+    // undefined
+    // add(1,2)
+    // 3
+    // const add = (v1, v2) => v1+v2
+
+    // undefined
+    // add(1,2)
+    // 3
+    // const add = (v1, v2) => (v1+v2)
+
+    // undefined
+    // add(1,2)
+    // 3
+
+    // const container = React.createElement("div", null, [span, btn]);
+    const Container = () => {
+        return (
+            <div>
+                <Span />
+                <Btn />
+            </div>
+        );
+    };
+    ReactDOM.render(<Container />, root);
+</script>
+
+</html>
