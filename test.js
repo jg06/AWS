@@ -572,6 +572,7 @@ function solution(n, t) {
 //9
 // Set   제일 쉬운데 뭔가 개념을 안친숙 할 수 있어요
 // indexOf   그나마 이게 제일 낫습니다
+// for => splice 힘들어요
 // for => array  힘들어요
 // for => object   // array보다는 쉽지만 indexOf보다는 어려워요
 const my_string = "people";
@@ -613,6 +614,22 @@ function solution(my_string) {
   answer = obj.answer;
   return answer;
 }
+
+// for문으로 해서 앞에서 뒤에꺼를 찾으면 뒤에꺼 삭제
+function solution(my_string) {
+  var answer = "";
+  const arr2 = my_string.split("");
+  for (let i = arr2.length; i >= 0; i -= 1) {
+    for (let j = i - 1; j >= 0; j -= 1) {
+      if (arr2[i] === arr2[j]) {
+        arr2.splice(i, 1);
+      }
+    }
+  }
+  answer = arr2.join("");
+  return answer;
+}
+
 
 
 //exp
@@ -830,3 +847,725 @@ reduce(numbers, (a, b) => {
   console.log(a, b);
   return a + b;
 });
+
+//////////////////////////////////////////12월 7일//////////////
+///////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+
+////////////////1
+class Study {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    console.log(`${this.name}을 공부하고 있습니다.`);
+  }
+}
+
+class Coding extends Study {
+  constructor(name, today) {
+    super(name);
+    this.today = today;
+  }
+
+  speak() {
+    console.log(`${this.today}은 ${this.name}를 공부 하고 있습니다.`);
+  }
+}
+
+const coding = new Coding("React", "오늘");
+coding.speak();
+
+// |출력 결과를 입력 해 주세요|
+오늘은 리엑트를 공부하고 있습니다
+
+
+////////////////2
+const root = document.getElementById("root");
+
+class H1 extends React.Fragment {
+  constructor(props) {
+      super(props);
+  }
+
+  render() {
+      return <h1>여기는 {this.props.name}!!!</h1>;
+  }
+}
+
+const Container = () => {
+  return (
+    <React.Fragment>
+      <H1 name="대한민국" />
+    </React.Fragment>
+  );
+};
+ReactDOM.render(<Container />, root);
+
+
+/////3
+const root = document.getElementById("root");
+
+function H1(props) {
+  return <h1>여기는 {props.name}!!!</h1>;
+}
+
+const Container = () => {
+  return (
+    <React.Fragment>
+      <H1 name="대한민국" />
+    </React.Fragment>
+  );
+};
+ReactDOM.render(<Container />, root);
+
+
+
+/////4
+const root = document.getElementById("root");
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+		this.state = {
+                counter: 0,
+            };
+  }
+
+  add = () => {
+		this.setState({
+                counter: this.state.counter + 1,
+            });
+  };
+
+  render() {
+    return (
+      <div>
+        <span>클릭: {this.state.counter}</span>
+        <button style={{ color: "red" }} onClick={this.add}>
+          클릭
+        </button>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<App />, root);
+
+
+// 5번문제 정답
+const root = document.getElementById("root");
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      counter: 0,
+    };
+  }
+
+  // state = {
+  //   counter: 0
+  // }
+
+  componentDidMount() {
+    console.log("페이지 로딩이 완료되었습니다");
+  }
+
+  add = () => {
+    this.setState((v1) => ({
+      counter: v1.counter + 1,
+    }));
+  };
+
+  render() {
+    return (
+      <div>
+        <span>클릭: {this.state.counter}</span>
+        <button style={{ color: "red" }} onClick={this.add}>
+          클릭
+        </button>
+      </div>
+    );
+  }
+}
+
+
+// 6번 문제 정답
+function solution(n) {
+  var answer = 0;
+  for (let i = 1; i <= n; i++) {
+    if (n % i === 0) {
+      answer = answer + 1;
+    }
+  }
+  return answer;
+}
+
+function solution(n) {
+  var answer = 0;
+  for (let i = 1; i <= n; i++) {
+    for (let l = 1; l <= n; l++) {
+      if (i * l === n) {
+        answer = answer + 1;
+      }
+    }
+  }
+  return answer;
+}
+
+//////////////////////////////////////////12월 8일//////////////
+///////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+
+///1
+const array = [1,2,3,4,5]
+const array2 = []
+for (let i = 0; i < array.length; i++) {
+  array2.push(array[i]*2);
+}
+console.log(array2);
+
+//2
+const array = [1, 2, 3, 4, 5];
+const array2 = [];
+array.forEach((v) => {
+  array2.push(v * 2);
+  array2[i] = v * 2;
+});
+
+//3
+const array = [1,2,3,4,5]
+const array2 = array.map((value) => {
+  return value * 2;
+});
+console.log(array2);
+
+
+//4
+const array = ["일어나기", "씻기", "커피사기", "출근하기", "일하기", "점심먹기", "일하기", "퇴근하기"]
+const array2 = []
+for (let i = 0; i < array.length; i++) {
+  array2.push(<li>{array[i]}</li>);
+}
+
+
+//5
+const array = ["일어나기", "씻기", "커피사기", "출근하기", "일하기", "점심먹기", "일하기", "퇴근하기"]
+const array2 = []
+array.forEach((v) => {
+  array2.push(<li>{v}</li>);
+});
+
+
+// 6번 문제 정답
+const array = [
+  "일어나기",
+  "씻기",
+  "커피사기",
+  "출근하기",
+  "일하기",
+  "점심먹기",
+  "일하기",
+  "퇴근하기",
+];
+const array2 = array.map((v) => {
+  return <li>{v}</li>;
+});
+
+
+// 7번 문제 정답
+const root = ReactDOM.createRoot(document.getElementById("root"));
+const array = [
+  { id: "1", name: "김", nick: "김씨" },
+  { id: "2", name: "이", nick: "이씨" },
+  { id: "3", name: "최", nick: "최씨" },
+  { id: "4", name: "박", nick: "박씨" },
+];
+
+function ClientList(props) {
+  return <ul>{props.clientList}</ul>;
+}
+const array2 = [];
+for (let i = 0; i < array.length; i++) {
+  array2.push(
+    <li>{`${array[i].id}번의 이름은 ${array[i].name}이고 닉네임은 ${array[i].nick}입니다.`}</li>
+  );
+}
+
+root.render(<ClientList clientList={array2} />);
+
+
+// 8번 문제 정답
+const root = ReactDOM.createRoot(document.getElementById("root"));
+const array = [
+  { id: "1", name: "김", nick: "김씨" },
+  { id: "2", name: "이", nick: "이씨" },
+  { id: "3", name: "최", nick: "최씨" },
+  { id: "4", name: "박", nick: "박씨" },
+];
+
+function ClientList(props) {
+  return <ul>{props.clientList}</ul>;
+}
+const array2 = [];
+array.forEach((v) => {
+  array2.push(
+    <li>{`${v.id}번의 이름은 ${v.name}이고 닉네임은 ${v.nick}입니다.`}</li>
+  );
+});
+
+root.render(<ClientList clientList={array2} />);
+
+// 
+
+
+
+// 9번 문제 정답
+const root = ReactDOM.createRoot(document.getElementById("root"));
+const array = [
+  { id: "1", name: "김", nick: "김씨" },
+  { id: "2", name: "이", nick: "이씨" },
+  { id: "3", name: "최", nick: "최씨" },
+  { id: "4", name: "박", nick: "박씨" },
+];
+
+function ClientList(props) {
+  return <ul>{props.clientList}</ul>;
+}
+const array2 = array.map((v) => {
+  return (
+    <li>{`${v.id}번의 이름은 ${v.name}이고 닉네임은 ${v.nick}입니다.`}</li>
+  );
+});
+
+root.render(<ClientList clientList={array2} />);
+
+
+
+// // 10번 문제 정답
+const root = ReactDOM.createRoot(document.getElementById("root"));
+const array = [
+  { id: "1", name: "김", nick: "김씨" },
+  { id: "2", name: "이", nick: "이씨" },
+  { id: "3", name: "최", nick: "최씨" },
+  { id: "4", name: "박", nick: "박씨" },
+];
+
+function ClientList(props) {
+  return <ul>{props.clientList}</ul>;
+}
+const array2 = array.map((v) => {
+  if (v.name === "김") {
+    return (
+      <li>{`${v.id}번의 이름은 ${v.name}이고 닉네임은 ${v.nick}입니다.`}</li>
+    );
+  }
+});
+
+root.render(<ClientList clientList={array2} />);
+
+
+//11
+function solution(my_string, letter) {
+  var answer = "";
+  const my_array = my_string.split("");
+  console.log(my_array);
+  for (let i = my_array.length - 1; i >= 0; i--) {
+    console.log(i);
+    if (my_array[i] === letter) {
+      my_array.splice(i, 1);
+    }
+  }
+  answer = my_array.join("");
+  return answer;
+}
+
+console.log(solution("abcdeff", "f"));
+
+
+//11-1
+// function solution(my_string, letter) {
+//   var answer = "";
+//   const my_array = my_string.split("");
+//   answer = my_array.map((string) => {
+//     if (string !== letter) return string;
+//   });
+//   return answer.join("");
+// }
+
+// console.log(solution("abcdeff", "f"));
+
+//11-2
+// function solution(my_string, letter) {
+//   var answer = my_string.split(letter).join("");
+//   return answer;
+// }
+
+
+// 12번 문제 정답
+function solution(strlist) {
+  var answer = strlist.map((v) => {
+    return v.length;
+  });
+  return answer;
+}
+
+function solution(strlist) {
+  return strlist.map((v) => v.length);
+}
+
+console.log(solution(["We", "are", "the", "world!"]));
+
+// function solution(strlist) {
+//   var answer = [];
+//   for (let i = 0; i < strlist; i++) {
+//     answer.push(strlist[i].length);
+//   }
+//   return answer;
+// }
+
+// function solution(strlist) {
+//   var answer = [];
+//   strlist.forEach((v) => {
+//     answer.push(v.length);
+//   });
+//   return answer;
+// }
+
+
+
+
+//////////////////////////////////////////12월 9일//////////////
+///////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+
+//1
+const root = ReactDOM.createRoot(document.getElementById("root"));
+const array = [1, 2, 3, 4, 5];
+const array2 = array.map((value, index) => {
+  return <li key={index}>{value}</li>
+});
+function ClientList(props) {
+  return <ul>{props.clientList}</ul>;
+}
+root.render(<ClientList clientList={array2} />);
+
+
+
+
+
+//2
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+    function ListItem(props) {
+      console.log(props);
+      return (
+        <li
+          // onClick={() => {
+          // props.clickEvent(props.index);
+          // }}
+          onClick={props.clickEvent}
+        >
+          {props.value}
+        </li>
+      );
+    }
+
+    function TextLists(props) {
+      props; // {items:{}, clickEvent: function handleClick}
+      const items = props.items;
+      return (
+        <ul>
+          {items.map((value, index) => {
+            return (
+              <ListItem
+                key={index}
+                value={value}
+                // clickEvent={props.clickEvent}
+                // index={index}
+                clickEvent={() => {
+                  props.clickEvent(index);
+                }}
+              />
+            );
+          })}
+        </ul>
+      );
+    }
+
+    class ListControl extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = {
+          list: [1, 2, 3],
+          value: "",
+        };
+      }
+
+      handleClick = (index) => {
+        const lists = this.state.list;
+        lists[index] = lists[index] * 2;
+        this.setState({ list: lists });
+      };
+
+      render() {
+        return (
+          <React.Fragment>
+            <TextLists items={this.state.list} clickEvent={this.handleClick} />
+          </React.Fragment>
+        );
+      }
+    }
+
+    root.render(<ListControl />);
+
+
+
+//3
+function solution(n) {
+  var answer = 0;
+	answer = parseInt((n-1)/7)+1;
+  return answer;
+}
+console.log(solution(n));
+
+
+//4
+function solution(slice, n) {
+  var answer = 0;
+  answer = parseInt((n-1)/slice)+1;
+  return answer;
+}
+console.log(solution(4, 12));
+
+// 3번 문제 정답
+function solution(n) {
+  // ceil  올림
+  // round 반올림
+  // floor 버림
+  return Math.ceil(n / 7);
+}
+
+// 4번 문제 정답
+function solution(slice, n) {
+  return Math.ceil(n / slice);
+}
+
+//////////////////////////////////////////12월 13일//////////////
+///////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+
+//1
+// for문
+function solution(cipher, code) {
+  var answer = "";
+  for (let i = 0; i < cipher.length; i += 1) {
+    if (i % code === code - 1) {
+      answer = answer + cipher[i];
+    }
+  }
+  return answer;
+}
+solution("dfjardstddetckdaccccdegk", 4);
+
+// filter
+function solution(cipher, code) {
+  return cipher
+    .split("")
+    .filter((value, index) => index % code === code - 1)
+    .join("");
+}
+console.log(solution("dfjardstddetckdaccccdegk", 4));
+
+// 좋은 for문
+function solution(cipher, code) {
+  var answer = "";
+  for (let i = 1; i < cipher.length; i = i + code) {
+    answer = answer + cipher[i];
+  }
+  return answer;
+}
+
+//2
+// for문
+function solution(array) {
+  var answer = [0, 0];
+  for (let i = 0; i < array.length; i += 1) {
+    if (answer[0] < array[i]) {
+      answer = [array[i], i];
+    }
+  }
+  return answer;
+}
+
+// map으로 푼다
+function solution(array) {
+  var answer = [0, 0];
+  array.map((value, index) => {
+    if (answer[0] < value) {
+      answer = [value, index];
+    }
+  });
+  return answer;
+}
+
+// forEach으로 푼다
+function solution(array) {
+  var answer = [0, 0];
+  array.forEach((value, index) => {
+    if (answer[0] < value) {
+      answer = [value, index];
+    }
+  });
+  return answer;
+}
+
+console.log(solution([1, 8, 3]));
+
+
+
+//////////////////////////////////////////12월 14일//////////////
+///////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+
+//1
+// 1번문제 for문
+// right -> 배열의 끝에 있는 것이 배열의 첫번째로 간다.
+//            pop -> unshift를 하면 된다.
+
+// left -> 배열의 첫번째 있는 것이 배열의 마지막으로 간다
+//           shift -> push
+function solution(numbers, direction) {
+  var answer = [];
+  // numbers = [1,2,3]
+  if (direction === "right") {
+    let pop = numbers.pop(); // 3
+    numbers.unshift(pop); // [3, 1, 2]
+    answer = nunbers;
+    // answer = numbers.unshift(numbers.pop())
+  } else {
+    let shift = numbers.shift(); // 1
+    numbers.push(shift);
+    answer = numbers;
+  }
+  return answer;
+}
+// 1번문제 구조분해 할당
+function solution(numbers, direction) {
+  var answer = [];
+  if (direction === "right") {
+    // answer = [numbers.pop(), ...numbers];
+    answer = [
+      numbers[numbers.length - 1],
+      ...numbers.slice(0, numbers.length - 1),
+    ];
+  } else {
+    slice ->
+    answer = [...numbers.slice(1, numbers.length), numbers[0]];
+  }
+  return answer;
+}
+
+//2
+function solution(num, k) {
+  var answer = 0;
+  // num은 정수 string이나 array로 변환이 필요하다.
+  let a = num.toString(); // 정수 -> 문자열
+  let b = a.indexOf(k); // k의 index를 찾음
+  // 없으면 -1, 있으면 0부터 시작하는 index를 반환
+  if (b !== -1) {
+    answer = b + 1;
+  } else {
+    answer = -1;
+  }
+  return answer;
+}
+
+function solution(num, k) {
+  return (" " + num).indexOf(k);
+}
+
+function solution(num, k) {
+  let answer = 0;
+  let arrayNum = num.toString().split("");
+  let addArrayNum = [" ", ...arrayNum];
+  answer = addArrayNum.indexOf(k);
+  // index가 0부터 시작합니다.
+  return answer;
+}
+//////////////////////////////////////////12월 15일//////////////
+///////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+
+//1-1
+function solution(box, n) {
+  return parseInt((box[0] / n)) * parseInt((box[1] / n)) * parseInt((box[2] / n));
+}
+
+console.log(solution([10, 8, 6], 3));
+
+//1-2
+function solution(box, n) {
+  // box = [10, 8, 6]
+  var answer = 0;
+  var x = Math.floor(box[0] / n);
+  var y = Math.floor(box[1] / n);
+  var z = Math.floor(box[2] / n);
+  answer = x * y * z;
+  return answer;
+}
+//1-3
+function solution(box, n) {
+  // box = [10, 8, 6]
+  var answer = 0;
+  var x = Math.floor(box[0] / n);
+  var y = Math.floor(box[1] / n);
+  var z = Math.floor(box[2] / n);
+  answer = x * y * z;
+
+  var answer = 1;
+  for (let i = 0; i < box.length; i++) {
+    anwser *= Math.floor(box[i] / n);
+  }
+//////////////////////////////////////////12월 16일//////////////
+///////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+//1
+    function solution(sides) {
+    sides.sort(function(a, b)  {
+    return a - b;
+    });
+    if (sides[2] < sides[0] + sides[1]) {
+      return 1;
+    } else {
+      return 2;
+    }
+}
+
+  
+//1-2
+  function solution(sides) { 
+    return sides.sort((a, b) => a - b) && sides[2] < sides[0] + sides[1] ? 1 : 2
+}
+  console.log(solution([3, 6, 2]));

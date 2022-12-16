@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div id="root"></div>
+</body>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+
+    function AddArea(props) {
+        const input = React.useRef(null);
+
+        React.useEffect(() => {
+            input.current.focus();
+        });
+
+        const onButtonClick = () => {
+            input.current.value = "";
+        };
+
+        return (
+            <div>
+                <input ref={input} onChange={props.onChange} value={props.value} />
+                <button onClick={props.onClick}>추가</button>
+                <button onClick={onButtonClick}>초기화</button>
+            </div>
+        );
+    }
+
+    function ListItem(props) {
+        return <li onDoubleClick={props.onDoubleClick}>{props.value}</li>;
+    }
+
+    function TextLists(props) {
+        const items = props.items;
+        return (
+            <ul>
+                {items.map((value, index) => {
+                    return (
+                        <ListItem
+                            key={index}
+                            value={value}
+                            onDoubleClick={() => {
+                                props.onDoubleClick(index);
+                            }}
+                        >
+                            {value}
+                        </ListItem>
+                    );
+                })}
+            </ul>
+        );
+    }
+
+    function TextArea(props) {
+        return (
+            <div>
+                <span>{`현재 리스트 중 10보다 작은 수를 가진 리스트는 ${props.len}개 입니다.`}</span>
+            </div>
+        );
+    }
+
+    function ListControl(props) {
+        const [list, chnageList] = React.useState([1, 2, 3]);
+        const [value, changeValue] = React.useState("");
+
+        const handleChange = (e) => {
+            changeValue(e.target.value);
+        };
+
+        const handleInsert = () => {
+            chnageList([...list, value]);
+            changeValue("");
+        };
+
+        const handleRemove = (index) => {
+            const lists = list;
+            chnageList([
+                ...lists.slice(0, index),
+                ...lists.slice(index + 1, lists.length),
+            ]);
+        };
+
+        const checkListLen = () => {
+            console.log("checkListLen 실행");
+            let count = 0;
+            for (let i = 0; i < list.length; i++) {
+                if (Number(list[i]) < 10) {
+                    count++;
+                }
+            }
+            return count;
+        };
+
+        const len = React.useMemo(() => {
+            return checkListLen();
+        }, [list]);
+
+        return (
+            <React.Fragment>
+                <AddArea
+                    value={value}
+                    onChange={handleChange}
+                    onClick={handleInsert}
+                />
+                <TextArea len={len} />
+                <TextLists items={list} onDoubleClick={handleRemove} />
+            </React.Fragment>
+        );
+    }
+
+    root.render(<ListControl />);
+</script>
+
+</html>

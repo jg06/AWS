@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+
+        function App(props) {
+            // const [counter, changeCounter] = React.useState(0);
+
+            // const add = () => {
+            //   changeCounter(counter + 1);
+            // };
+
+            // const minus = () => {
+            //   changeCounter(counter - 1);
+            // };
+
+            const init = { count: 0 };
+
+            function reducer(state, action) {
+                switch (action.type) {
+                    case "add":
+                        return { count: state.count + 1 };
+                    case "minus":
+                        return { count: state.count - 1 };
+                    default:
+                        console.log("error");
+                }
+            }
+
+            const [state, dispatch] = React.useReducer(reducer, init);
+            return (
+                <div>
+                    <span>클릭: {state.count}</span>
+                    <button
+                        onClick={() => {
+                            dispatch({ type: "add" });
+                        }}
+                    >
+                        +
+                    </button>
+                    <button
+                        onClick={() => {
+                            dispatch({ type: "minus" });
+                        }}
+                    >
+                        -
+                    </button>
+                </div>
+            );
+        }
+
+        root.render(<App />);
+    </script>
+</body>
+
+</html>
