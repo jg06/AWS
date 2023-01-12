@@ -14,7 +14,7 @@ export default function About() {
     <section id="about">
       <div id="About_main">
         <div className="About_Header">
-          <span>About Me</span>
+          <span >About Me</span>
           <hr></hr>
         </div>
         <div className="PR">
