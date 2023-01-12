@@ -1,0 +1,106 @@
+#About_main {
+  margin-top: 150px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.About_Header {
+  margin-right: 50%;
+  font-size: 2vw;
+  text-shadow: 1px 1px 1px black;
+}
+.PR {
+  width: 50%;
+  font-size: 1rem;
+  color: rgb(184, 182, 182);
+}
+img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+.logo_temp {
+  display: grid;
+  grid-template-columns: repeat(7, 100px);
+  grid-template-rows: repeat(2, 100px);
+  margin-top: 50px;
+}
+.C {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  margin: auto;
+}
+.CP {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  text-align: center;
+  margin-top: -10px;
+}
+.Python {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  margin: auto;
+}
+.PythonP {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  text-align: center;
+  margin-top: -10px;
+}
+.Java {
+  grid-column-start: 3;
+  grid-row-start: 1;
+  margin: auto;
+}
+.JavaP {
+  grid-column-start: 3;
+  grid-row-start: 2;
+  text-align: center;
+  margin-top: -10px;
+}
+.JavaScript {
+  grid-column-start: 4;
+  grid-row-start: 1;
+  margin: auto;
+}
+.JavaScriptP {
+  grid-column-start: 4;
+  grid-row-start: 2;
+  text-align: center;
+  margin-top: -10px;
+}
+.React {
+  grid-column-start: 5;
+  grid-row-start: 1;
+  margin: auto;
+}
+.ReactP {
+  grid-column-start: 5;
+  grid-row-start: 2;
+  text-align: center;
+  margin-top: -10px;
+}
+.Nodejs {
+  grid-column-start: 6;
+  grid-row-start: 1;
+  margin: auto;
+}
+.NodejsP {
+  grid-column-start: 6;
+  grid-row-start: 2;
+  text-align: center;
+  margin-top: -10px;
+}
+.SQL {
+  grid-column-start: 7;
+  grid-row-start: 1;
+  margin: auto;
+}
+.SQLP {
+  grid-column-start: 7;
+  grid-row-start: 2;
+  text-align: center;
+  margin-top: -10px;
+}
