@@ -9,7 +9,7 @@ const Lbar = () => {
   const [activeNav, setActiveNav] = useState("#");
   const WebList = () => (
     <div className="WebList">
-      <a href="/">
+      <a href="https://jg06.github.io">
         <div>
           <p>- First Project</p>
         </div>
