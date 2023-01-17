@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+  <html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>레이아웃</title>
+    </head>
+    <body>
+      <h3>레이아웃</h3>
+      <style>
+        * {
+          box-sizing: border-box;
+        }
+        nav ul {
+          list-style: none;
+        }
+        nav ul li {
+          display: inline-block;
+          padding: 20px;
+          margin: 0 20px;
+          border: 1px solid #222;
+          cursor: pointer;
+          /*
+            s - 초
+            ms - 마이크로초(1000)
+             0.4s == 400ms
+             1s == 1000ms
+          */
+          transition: 400ms;
+          transition: 0.4s;
+          transition: .4s;
+        }
+        nav ul li:hover {
+          background-color: aliceblue;
+        }
+        .float {
+          float: right;
+          width: 100px;
+          height: 100px;
+          background-color: red;
+          border: 1px solid black;
+        }
+        hr {
+          clear: both;
+        }
+        img {
+          float: right;
+          margin: 0 0 20px 20px;
+        }
+      </style>
+      <nav>
+        <ul>
+          <li>menu 1</li>
+          <li>menu 2</li>
+          <li>menu 3</li>
+          <li>menu 4</li>
+        </ul>
+      </nav>
+      <hr>
+      <h3>float</h3>
+      <p>float: 요소를 수평 배치함.</p>
+      <div class="float">1</div>
+      <div class="float">2</div>
+      <div class="float">3</div>
+      <hr>
+      <div>
+        <img src="/anchor/img/a.jpg" alt="호랑이">이전에 저는 마진 값을 어찌어찌 바꿔보면서 의도한 대로 보이면 그냥 넘어간 경우가 많았습니다. 하지만 계속된 시행착오를 막고자 이번 기회에 정리를 해봤습니다. 이것저것 찾아보다 보니 제가 잘 안다고 생각했던 것들이 결국 얕은 수준이었다는 것을 깨닫게 됐습니다.😂 넓게 아는 것과 깊게 아는 것. 그 중간을 잘 맞춰가야겠습니다.
+      </div>
+      <style>
+        .box1, .box2 {
+          width: 100px;
+          height: 100px;
+          background-color: red;
+          border: 1px solid black;
+          float: left;
+        }
+        .box1 {}
+        .box2 {}
+        .box3 {
+          height: 100px;
+          background-color: green;
+        }
+        .par {
+          background-color: blue;
+          overflow: hidden;
+        }
+        /* .par::after {
+          content: "";
+          clear: both;
+          display: table;
+        } */
+      </style>
+      <div class="par">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+      </div>
+      <div class="box3">3</div>
+    </body>
+</html>

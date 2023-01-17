@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div id="root"></div>
+</body>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+
+    class H1 extends React.Component {
+        constructor(props) {
+            super(props);
+        }
+
+        render() {
+            return <h1>Hello, {this.props.name}!</h1>;
+        }
+    }
+
+    class Clock extends React.Component {
+        constructor(props) {
+            super(props);
+            // 정석적인 방법
+            this.state = {
+                date: new Date(),
+                counter: 0,
+            };
+        }
+
+        // consturctor가 실행 된 이후에 별도로 동작
+        // state를 선언하는게 살짝은 늦다
+        // 그러나 컴퓨터에서 렌더링하는 중에 일어나기 때문에 큰 영향은 없어 보인다.
+        state = {
+            date: new Date(),
+            counter: 0,
+        };
+
+        componentDidMount() {
+            // 초기값 설정
+            // this.timerId = setInterval(() => {
+            //   this.tick();
+            // }, 1000);
+            setTimeout(() => {
+                // this.setState({
+                //   counter: this.state.counter + 10,
+                // });
+                this.setState((prevState) => ({
+                    counter: prevState.counter + 10,
+                }));
+                // console.log(this.state.counter);
+            }, 3000);
+            setTimeout(() => {
+                // this.setState({
+                //   counter: this.state.counter - 20,
+                // });
+                this.setState((v1) => ({
+                    counter: v1.counter - 20,
+                }));
+                console.log(this.state.counter);
+            }, 3000);
+            setTimeout(() => {
+                console.log(this.state);
+            }, 5000);
+        }
+
+        // componentDidUpdate() {
+        //   clearInterval(this.timerId);
+        //   this.timerId = setInterval(() => {
+        //     this.tick();
+        //   }, 10000);
+        // }
+
+        componentWillUnmount() {
+            clearInterval(this.timerId);
+        }
+
+        tick() {
+            // this.setState({
+            //   date: new Date(),
+            // });
+            // > 직접 state를 수정 하면 안됩니다.
+            // this.state.date = "123";
+            // > 이전 값을 받아서 업데이트를 해야 합니다.
+            this.setState({
+                counter: this.state.counter + 1,
+            });
+            console.log(this.state);
+        }
+
+        render() {
+            return (
+                <div>
+                    <H1 name="대한민국" />
+                    <h2>It is {this.state.date.toLocaleTimeString()}</h2>
+                </div>
+            );
+        }
+    }
+
+    root.render(<Clock />);
+</script>
+
+</html>

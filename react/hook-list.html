@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div id="root"></div>
+</body>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+
+    function AddArea(props) {
+        const input = React.useRef(null);
+
+        React.useEffect(() => {
+            // const id = setInterval(() => {
+            //   console.log(`tick ${props.value}`);
+            // }, 1000);
+            // return function effectEvent() {
+            //   clearInterval(id);
+            // };
+
+            input.current.focus();
+        });
+
+        const onButtonClick = () => {
+            input.current.value = "";
+        };
+
+        return (
+            <div>
+                <input ref={input} onChange={props.onChange} value={props.value} />
+                <button onClick={props.onClick}>추가</button>
+                <button onClick={onButtonClick}>초기화</button>
+            </div>
+        );
+    }
+
+    // let id;
+
+    // class AddArea extends React.Component {
+    //   constructor(props) {
+    //     super(props);
+    //   }
+
+    //   componentDidMount() {
+    //     id = setInterval(() => {
+    //       console.log(`tick ${this.props.value}`);
+    //     }, 1000);
+    //     console.log("렌더가 되었을 때");
+    //   }
+
+    //   componentDidUpdate() {
+    //     clearInterval(id);
+    //     id = setInterval(() => {
+    //       console.log(`tick ${this.props.value}`);
+    //     }, 1000);
+    //     console.log("업데이트가 되었을 때");
+    //   }
+
+    //   componentWillUnmount() {
+    //     clearInterval(id);
+    //     console.log("언마운트 되었을 때");
+    //   }
+
+    //   render() {
+    //     return (
+    //       <div>
+    //         <input onChange={this.props.onChange} value={this.props.value} />
+    //         <button onClick={this.props.onClick}>추가</button>
+    //       </div>
+    //     );
+    //   }
+    // }
+
+    function ListItem(props) {
+        return <li onDoubleClick={props.onDoubleClick}>{props.value}</li>;
+    }
+
+    function TextLists(props) {
+        const items = props.items;
+        return (
+            <ul>
+                {items.map((value, index) => {
+                    return (
+                        <ListItem
+                            key={index}
+                            value={value}
+                            onDoubleClick={() => {
+                                props.onDoubleClick(index);
+                            }}
+                        >
+                            {value}
+                        </ListItem>
+                    );
+                })}
+            </ul>
+        );
+    }
+
+    // function ListControl(props) {
+    //   const [list, changeList] = React.useState([1, 2, 3]);
+    //   const [value, changeValue] = React.useState("");
+
+    //   const handleChange = (e) => {
+    //     changeValue(e.target.value);
+    //   };
+
+    //   const handleInsert = () => {
+    //     changeList([...list, value]);
+    //     changeValue("");
+    //   };
+
+    //   const handleRemove = (index) => {
+    //     const lists = list;
+    //     changeList([
+    //       ...lists.slice(0, index),
+    //       ...lists.slice(index + 1, lists.length),
+    //     ]);
+    //   };
+
+    //   return (
+    //     <React.Fragment>
+    //       <AddArea
+    //         value={value}
+    //         onChange={handleChange}
+    //         onClick={handleInsert}
+    //       />
+    //       <TextLists items={list} onDoubleClick={handleRemove} />
+    //     </React.Fragment>
+    //   );
+    // }
+
+    class ListControl extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                list: [1, 2, 3],
+                value: "",
+            };
+        }
+
+        handleChange = (e) => {
+            this.setState({ value: e.target.value });
+        };
+
+        handleInsert = () => {
+            this.setState({
+                // list: this.state.list.concat(this.state.value),
+                list: [...this.state.list, this.state.value],
+                value: "",
+            });
+        };
+
+        handleRemove = (index) => {
+            const lists = this.state.list;
+            this.setState({
+                list: [
+                    ...lists.slice(0, index),
+                    ...lists.slice(index + 1, lists.length),
+                ],
+            });
+        };
+
+        render() {
+            console.log(this.state.list);
+            if (this.state.list.length === 0) {
+                console.log();
+            }
+            return (
+                <React.Fragment>
+                    {this.state.list.length !== 0 && (
+                        <AddArea
+                            value={this.state.value}
+                            onChange={this.handleChange}
+                            onClick={this.handleInsert}
+                        />
+                    )}
+                    <TextLists
+                        items={this.state.list}
+                        onDoubleClick={this.handleRemove}
+                    />
+                </React.Fragment>
+            );
+        }
+    }
+
+    root.render(<ListControl />);
+</script>
+
+</html>

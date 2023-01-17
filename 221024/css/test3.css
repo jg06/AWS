@@ -1,0 +1,7 @@
+p {
+    color: blue;
+    text-decoration-style: double;
+    text-decoration-line: overline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: brown;
+  }

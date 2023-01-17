@@ -1,0 +1,68 @@
+
+.Menu {
+  color: white;
+  cursor: pointer;
+  -webkit-tap-highlight-color : transparent !important;
+}
+.Menu p:hover {
+  background-color: rgb(88, 88, 88);
+}
+.WebList p:hover {
+  background-color: rgb(88, 88, 88);
+}
+.Lbar-wrapper {
+  background-color: rgb(43, 43, 43);
+  height: calc(100% - 18%);
+  padding-top: 5px;
+}
+.WebList a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+.WebList p {
+  padding-left: 30%;
+}
+
+.Web {
+  padding-left: 20%;
+}
+.Projects {
+  padding-left: 10%;
+}
+.arrow {
+  width: 10px;
+  height: 10px;
+  object-fit: contain;
+  margin-right: 5%;
+}
+.show-menu {
+  transform: rotate(90deg);
+  width: 10px;
+  height: 10px;
+  object-fit: contain;
+  margin-right: 5%;
+}
+.hide-menu {
+  width: 10px;
+  height: 10px;
+  object-fit: contain;
+  margin-right: 5%;
+}
+
+.NavList a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+.NavList p {
+  padding-left: 30%;
+}
+@media (max-width: 500px) {
+  .Lbar-wrapper {
+    background-color: rgb(43, 43, 43);
+    height: calc(100% - 8%);
+    width: 100%;
+    padding-top: 45px;
+  }
+}

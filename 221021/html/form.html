@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+  <html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>폼 삽입하기</title>
+    </head>
+    <body>
+      <h3>폼 삽입하기</h3>
+      <p>사용자에게 정보를 입력받아 데이터를 전송</p>
+      <form method="GET" name="myForm" action="formresult.html" target="_self" autocomplete="on">
+        <fieldset>
+          <legend>로그인</legend>
+          <label for="userName">이름</label>
+          <input type="text" name="userName" placeholder="이름을 입력하세요." id="userName">
+          <input type="submit">
+        </fieldset>
+      </form>
+      <hr>
+      <form method="GET" name="myForm" action="http://www.naver.com" target="_self">
+        <input type="text" name="userName">
+        <input type="submit">
+      </form>
+    </body>
+</html>

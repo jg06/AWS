@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'mylover';
+    src: url('/fonts/Love.ttf') format('truetype');
+  }
+  
+  p {
+    font-family: 궁서, 궁서체,serif;
+  }
+  #first {
+    font-family: "맑은 고딕";
+  }
+  p {
+    font-size: 1em;
+  }
+  .second.imp {
+    font-size: xx-large;
+  }
+  .second {
+    font-family: 'mylover';
+    font-size: 34px;
+  }
+  table, td, th {
+    border: 1px solid;
+    border-collapse: collapse;
+    font-family: 'Black And White Picture', sans-serif;
+  }
+  td, th {
+    padding: 5px 15px
+  }
+  tr {
+    font-size: 32px;
+  }
+  #em {
+    font-size: 2em;
+  }
+  #rem {
+    font-size: 2rem;
+  }
+  div {
+    height: 150px;
+    background-color: antiquewhite;
+    text-align: center;
+    line-height: 150px;
+  }

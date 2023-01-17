@@ -1,0 +1,24 @@
+.M_Button {
+  display: none;
+}
+@media (max-width: 500px) {
+  .B_table {
+  position: fixed;
+  z-index: 2;
+  }
+  .M_Button {
+    display: block;
+    position: absolute;
+    padding-left: 10px;
+    z-index: 2;
+  }
+  .hide-Mmenu {
+    width: 20px;
+    height: 20px;
+  }
+  .show-Mmenu {
+    width: 20px;
+    height: 20px;
+    transform: rotate(90deg);
+  }
+}

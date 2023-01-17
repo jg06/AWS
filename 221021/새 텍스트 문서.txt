@@ -1,0 +1,295 @@
+https://jsbin.com/yeliviworu/edit?html,output
+
+테이블 html 파일 소스좀 보여주세여
+
+쌤
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+title
+1행 1열	1행 2열	1행 3열
+2행 1열	2행 2열	2행 3열
+3행 1열	3행 2열	3행 3열
+
+
+target=_blank>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+title
+1행 1열	1행 2열	1행 3열
+2행 1열	2행 2열	2행 3열
+3행 1열	3행 2열	3행 3열
+
+
+쌤
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>테이블</title>
+  <link rel="stylesheet" href="css/table.css">
+</head>
+<body>
+  <table>
+    <caption>title</caption>
+    <tr>
+      <th>1행 1열</th>
+      <th>1행 2열</th>
+      <th>1행 3열</th>
+    </tr>
+    <tr>
+      <td>2행 1열</td>
+      <td>2행 2열</td>
+      <td>2행 3열</td>
+    </tr>
+    <tr>
+      <td>3행 1열</td>
+      <td>3행 2열</td>
+      <td>3행 3열</td>
+    </tr>
+  </table>
+</body>
+</html>
+쌤
+/* table > tbody > tr > th | td */
+
+table, table th, table td {
+  border: 1px solid black; 
+  border-collapse: collapse;
+  padding: 5px 15px;
+}
+쌤
+<table>
+    <caption>요안도라 객실</caption>
+    <thead>
+      <tr>
+        <th>방 이름</th>
+        <th>대상</th>
+        <th>크기</th>
+        <th>가격</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tfoot>
+  </table>
+쌤
+http://www.easyspub.co.kr
+
+쌤
+https://drive.google.com/file/d/1piPD2RGEgzhHL416AjhQdNBNDLwS5bW-/view
+
+쌤
+/* table > tbody > tr > th | td */
+/* 테이블은 tbody 자동 삽입되므로 선택할 때 주의해야 함 */
+
+/* table, table th, table td {
+
+} */
+
+table, table > thead > tr > th, table > tbody > tr > td, table > tfoot > tr > td {
+  border: 1px solid black; 
+  border-collapse: collapse;
+  padding: 5px 15px;
+}
+
+table > thead > tr {
+  background-color: red;
+}
+/* table > tbody > tr > td:first-child {
+  background-color: green;
+}*/
+
+colgroup > col:first-child {
+  background-color: crimson !important;
+}
+쌤
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col
+
+쌤
+https://www.w3schools.com/html/html_favicon.asp
+
+쌤
+https://www.favicon-generator.org/
+
+쌤
+<!DOCTYPE html>
+  <html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>폼 삽입하기</title>
+    </head>
+    <body>
+      <h3>폼 삽입하기</h3>
+      <p>사용자에게 정보를 입력받아 데이터를 전송</p>
+      <form method="GET" name="myForm" action="formresult.html" target="_self" autocomplete="on">
+        <fieldset>
+          <legend>로그인</legend>
+          <label for="userName">이름</label>
+          <input type="text" name="userName" placeholder="이름을 입력하세요." id="userName">
+          <input type="submit">
+        </fieldset>
+      </form>
+      <hr>
+      <form method="GET" name="myForm" action="http://www.naver.com" target="_self">
+        <input type="text" name="userName">
+        <input type="submit">
+      </form>
+    </body>
+</html>
+1:1 질문
+formresult.html 도 부탁드립니다.
+쌤
+https://www.w3schools.com/html/html_form_attributes_form.asp
+
+쌤
+https://www.bing.com
+
+쌤
+function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+}
+쌤
+<!DOCTYPE html>
+  <html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>데이터받기</title>
+      
+    </head>
+    <body>
+      <script>
+        function getUrlParameter(sParam) {
+          var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+              sURLVariables = sPageURL.split('&'),
+              sParameterName,
+              i;
+
+          for (i = 0; i < sURLVariables.length; i++) {
+              sParameterName = sURLVariables[i].split('=');
+
+              if (sParameterName[0] === sParam) {
+                  return sParameterName[1] === undefined ? true : sParameterName[1];
+              }
+          }
+      }
+
+        let userName = getUrlParameter('userName');
+        document.body.innerHTML = '<h1>안녕하세요. ' + userName + '</h1>';
+      </script>
+    </body>
+</html>
+쌤
+<!DOCTYPE html>
+  <html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>input</title>
+    </head>
+    <body>
+      <form>
+        <input type="text" size="50" value="text" maxlength="4" readonly>
+        <input type="password" size="50" value="password">
+        <input type="search" size="50" value="search">
+        <input type="url" size="50" value="url">
+        <input type="email" size="50" value="email">
+        <input type="submit">
+      </form>
+    </body>
+</html>

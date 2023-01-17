@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+  <html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>박스 모델</title>
+    </head>
+    <body>
+      <h3>박스 모델</h3>
+      <p>태그들은 기본적으로 블록, 인라인 속성 중 하나를 가짐</p>
+      <p><a href="https://www.w3schools.com/html/html_blocks.asp" target="_blank">참조</a></p>
+      <p>블록: 넓이가 부모의 100%.</p>
+      <p><span>인라인</span>: 넓이/높이가 없음.</p>
+      <p><span>인라인-블록</span>: 옆에 요소가 오면서 넓이, 높이를 가짐</p>
+      <p><b>사용자가 속성을 변경할 수 있음.</b></p>
+      <style>
+        div {
+          border: 1px solid;
+          display: inline-block;
+          height: 100px;
+          width: 100px;
+          /* 요소 사이에 공백이 생김 */
+        }
+      </style>
+      <div>d1</div><div>d2</div><div>d3</div>
+      <hr>
+      <style>
+        .nom, .box {
+          width: 100px;
+          height: 100px;
+          border: 5px solid black;
+          padding: 5px;
+          margin: 5px;
+        }
+        .nom {
+          /*120*/
+          background-color: aqua;
+        }
+        .box {
+          /*100*/
+          box-sizing: border-box;
+          background-color: bisque;
+        }
+        a:focus {
+          outline: 10px ridge red;
+          outline-offset: 5px;
+        }
+        .box {
+          box-shadow: 1px 1px 1px red;
+          border-radius: 50px;
+        }
+      </style>
+      <div class="nom">nomal</div>
+      <div class="box">box-sizing</div>
+      <style>
+        .hop {
+          cursor: pointer;
+          position: relative;
+        }
+        .hop, .hop div {
+          height: auto;
+          width: auto;
+          border: none;
+          transition: 1s;
+        }
+        .hop div {
+          width: 0;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+        .hop:hover {
+          background-color: aqua;
+        }
+        .hop:hover div {
+          width: 50px;
+          border-bottom: 2px double black;
+        }
+      </style>
+      <div class="hop">
+        test
+        <div></div>
+      </div>
+    </body>
+</html>

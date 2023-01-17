@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+  <html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>test2</title>
+      <style>
+        textarea {
+          /* textarea 크기조절 방지 */
+          resize: none;
+        }
+      </style>
+    </head>
+    <body>
+      <form>
+        <textarea cols="20" rows="10"></textarea>
+        <hr>
+        <label for="item">상품선택</label>
+        <select id="item">
+          <option value="">선택</option>
+          <optgroup label="선물용">
+            <option value="p3">선물용 3kg</option>
+            <option selected value="p5">선물용 5kg</option>
+          </optgroup>
+          <optgroup label="가정용">
+            <option value="h3">가정용 3kg</option>
+            <option value="h5">가정용 5kg</option>
+          </optgroup>
+        </select>
+      </form>
+    </body>
+</html>

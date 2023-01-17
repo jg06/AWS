@@ -1,0 +1,37 @@
+#Header {
+  margin-top: 95px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 4px 4px 4px black;
+}
+.Hi {
+  margin-right: 300px;
+  color: aquamarine;
+}
+.Name {
+  font-size: 400%;
+  text-shadow: 4px 4px 4px black;
+  color: rgb(255, 255, 255);
+}
+.Button {
+  color: aquamarine;
+  width: 150px;
+  height: 50px;
+  margin-top: 50px;
+  background: rgba(72, 72, 72, 0);
+  border: 2px solid aquamarine;
+  box-shadow: 4px 4px 4px black;
+  text-shadow: 4px 4px 4px black;
+  font-size: 12px;
+}
+.Button:hover {
+  background: rgb(21, 46, 38);
+}
+@media (max-width: 750px) {
+  .Hi {
+    display: none;
+  }
+}

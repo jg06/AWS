@@ -1,0 +1,26 @@
+#wrap {
+    width: 960px;
+    margin: 0 auto; /* 블록단위 요소일 경우 가운데 정렬*/
+  }
+  #wrap > header {
+    display: flex;
+    background-color: black;
+    color: white;
+    padding: 15px 0px;
+  }
+  #wrap > header > #logo {
+    font-size: 35px;
+    font-weight: bold;
+    padding-left: 15px;
+  }
+  #wrap > header > nav {
+    flex: 1;
+  }
+  #wrap > header > nav > ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  #wrap > header > nav > ul > li {
+    text-align: center;
+  }

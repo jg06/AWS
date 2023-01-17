@@ -1,0 +1,59 @@
+.temp_R {
+  background: rgb(72, 72, 72);
+  width: calc(100% - 200px);
+}
+
+.Main-wrapper {
+  background: rgb(72, 72, 72);
+}
+
+.timetable {
+  right: 30px;
+  position: fixed;
+  width: 40%;
+}
+
+.time-wrapper {
+  position: fixed;
+}
+
+.time {
+  float: right;
+  margin-top: 20px;
+  margin-right: -15px;
+  font-size: 20px;
+  font: bolder;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-shadow: 4px 4px 4px black;
+}
+.Header {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+@media (max-width: 700px) {
+  .temp_R {
+    background: rgb(72, 72, 72);
+    width: calc(100% - 100px);
+  }
+}
+@media (max-width: 500px) {
+  .temp_R {
+    background: rgb(72, 72, 72);
+    width: 100%;
+  }
+  .time {
+    float: right;
+    margin-top: 20px;
+    margin-right: -15px;
+    font-size: 15px;
+    font: bolder;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-shadow: 4px 4px 4px black;
+  }
+}

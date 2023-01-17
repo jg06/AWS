@@ -1,0 +1,14 @@
+.temp {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 980px){
+  .temp {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  }
+}

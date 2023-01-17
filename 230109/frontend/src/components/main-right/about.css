@@ -1,0 +1,112 @@
+
+#About_main {
+  padding-top: 150px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.About_Header {
+  margin-right: 50%;
+  font-size: 2vw;
+  text-shadow: 1px 1px 1px black;
+}
+.PR {
+  width: 50%;
+  font-size: 1rem;
+  color: rgb(184, 182, 182);
+}
+img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+.logo_temp {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  grid-template-rows: repeat(4, 100px);
+  margin-top: 50px;
+}
+.C {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  margin: auto;
+}
+.CP {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  text-align: center;
+  margin-top: -10px;
+}
+.Python {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  margin: auto;
+}
+.PythonP {
+  grid-column-start: 1;
+  grid-row-start: 3;
+  text-align: center;
+  margin-top: -10px;
+}
+.Java {
+  grid-column-start: 1;
+  grid-row-start: 3;
+  margin: auto;
+}
+.JavaP {
+  grid-column-start: 1;
+  grid-row-start: 4;
+  text-align: center;
+  margin-top: -10px;
+}
+.JavaScript {
+  grid-column-start: 1;
+  grid-row-start: 4;
+  margin: auto;
+}
+.JavaScriptP {
+  grid-column-start: 1;
+  grid-row-start: 5;
+  text-align: center;
+  margin-top: -10px;
+}
+.React {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  margin: auto;
+}
+.ReactP {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  text-align: center;
+  margin-top: -10px;
+}
+.Nodejs {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  margin: auto;
+}
+.NodejsP {
+  grid-column-start: 2;
+  grid-row-start: 3;
+  text-align: center;
+  margin-top: -10px;
+}
+.SQL {
+  grid-column-start: 2;
+  grid-row-start: 3;
+  margin: auto;
+}
+.SQLP {
+  grid-column-start: 2;
+  grid-row-start: 4;
+  text-align: center;
+  margin-top: -10px;
+}
+@media (max-width: 700px) {
+  .PR p {
+    font-size: 0.7rem;
+  }
+}

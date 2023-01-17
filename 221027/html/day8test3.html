@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+  <html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>반 나누기</title>
+      <style>
+        * {
+          margin: 0;
+          box-sizing: border-box;  
+        }
+        html, body {
+          height: 100%;
+        }
+        .wrap {
+          width: 100%;
+          height: 100%;
+        }
+        .top {
+          height: 75%;
+          overflow: hidden;
+        }
+        /* .clearfixed::after {
+          content: "";
+          display: table;
+          clear: both;
+        } */
+        .left {
+          float: left;
+          /* 넓이와 높이가 사라짐 */
+          width: 50%;
+          height: 100%;
+          background-color: red;
+        }
+        .right {
+          float: left;
+          width: 50%;
+          height: 100%;
+          background-color: green;
+        }
+        .btm {
+          height: 25%;
+          background-color: blue;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="wrap">
+        <div class="top clearfixed">
+          <div class="left"></div>
+          <div class="right"></div>
+        </div>
+        <div class="btm"></div>
+      </div>
+    </body>
+</html>

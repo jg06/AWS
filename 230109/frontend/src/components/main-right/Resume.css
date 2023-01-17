@@ -1,0 +1,23 @@
+#Resume_main {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+.Resume_Header {
+  margin-right: 50%;
+  font-size: 2vw;
+  text-shadow: 1px 1px 1px black;
+}
+.PR {
+  width: 50%;
+  font-size: 1rem;
+  color: rgb(184, 182, 182);
+}
+.Resume_Skill {
+  margin-right: 50%;
+  font-size: 2vw;
+  text-shadow: 1px 1px 1px black;
+}

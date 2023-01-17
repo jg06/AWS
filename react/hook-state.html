@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+
+        const App = () => {
+            const [counter, changeCounter] = React.useState(0);
+
+            function add() {
+                changeCounter(counter + 1);
+            }
+
+            return (
+                <div>
+                    <span>클릭: {counter}</span>
+                    <button onClick={add}>클릭</button>
+                </div>
+            )
+        }
+
+        // class App extends React.Component {
+        //   constructor(props) {
+        //     super(props);
+        //     this.state = {
+        //       counter: 0,
+        //     };
+        //   }
+
+        //   add = () => {
+        //     this.setState({
+        //       counter: this.state.counter + 1,
+        //     });
+        //   };
+
+        //   render() {
+        //     return (
+        //       <div>
+        //         <span>클릭: {this.state.counter}</span>
+        //         <button onClick={this.add}>클릭</button>
+        //       </div>
+        //     );
+        //   }
+        // }
+
+        root.render(<App />);
+    </script>
+</body>
+
+</html>

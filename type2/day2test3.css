@@ -1,0 +1,34 @@
+@media screen and (min-width: 800px) {
+  .wrapper span {
+    font-size: 2vw !important;
+    color: white;
+  }
+}
+#container {
+  width: 90vw;
+  height: 64px;
+  background: #d9d9d9;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.wrapper {
+  width: 62px;
+  height: 31px;
+  background: black;
+  text-align: center;
+}
+.wrapper span {
+  font-size: 3vw;
+  color: white;
+}
+
+/* #box1{
+align-self: flex-end;
+}
+
+#box3{
+align-self: flex-start;
+} */
