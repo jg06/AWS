@@ -1,5 +1,6 @@
+
 #About_main {
-  margin-top: 150px;
+  padding-top: 150px;
   color: white;
   display: flex;
   flex-direction: column;
@@ -23,8 +24,8 @@ img {
 }
 .logo_temp {
   display: grid;
-  grid-template-columns: repeat(7, 100px);
-  grid-template-rows: repeat(2, 100px);
+  grid-template-columns: repeat(2, 100px);
+  grid-template-rows: repeat(4, 100px);
   margin-top: 50px;
 }
 .C {
@@ -39,68 +40,73 @@ img {
   margin-top: -10px;
 }
 .Python {
-  grid-column-start: 2;
-  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-start: 2;
   margin: auto;
 }
 .PythonP {
-  grid-column-start: 2;
-  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-row-start: 3;
   text-align: center;
   margin-top: -10px;
 }
 .Java {
-  grid-column-start: 3;
-  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-start: 3;
   margin: auto;
 }
 .JavaP {
-  grid-column-start: 3;
-  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-row-start: 4;
   text-align: center;
   margin-top: -10px;
 }
 .JavaScript {
-  grid-column-start: 4;
-  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-start: 4;
   margin: auto;
 }
 .JavaScriptP {
-  grid-column-start: 4;
-  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-row-start: 5;
   text-align: center;
   margin-top: -10px;
 }
 .React {
-  grid-column-start: 5;
+  grid-column-start: 2;
   grid-row-start: 1;
   margin: auto;
 }
 .ReactP {
-  grid-column-start: 5;
+  grid-column-start: 2;
   grid-row-start: 2;
   text-align: center;
   margin-top: -10px;
 }
 .Nodejs {
-  grid-column-start: 6;
-  grid-row-start: 1;
+  grid-column-start: 2;
+  grid-row-start: 2;
   margin: auto;
 }
 .NodejsP {
-  grid-column-start: 6;
-  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-row-start: 3;
   text-align: center;
   margin-top: -10px;
 }
 .SQL {
-  grid-column-start: 7;
-  grid-row-start: 1;
+  grid-column-start: 2;
+  grid-row-start: 3;
   margin: auto;
 }
 .SQLP {
-  grid-column-start: 7;
-  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-row-start: 4;
   text-align: center;
   margin-top: -10px;
+}
+@media (max-width: 700px) {
+  .PR p {
+    font-size: 0.7rem;
+  }
 }

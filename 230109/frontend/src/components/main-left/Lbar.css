@@ -1,6 +1,8 @@
+
 .Menu {
   color: white;
   cursor: pointer;
+  -webkit-tap-highlight-color : transparent !important;
 }
 .Menu p:hover {
   background-color: rgb(88, 88, 88);
@@ -22,26 +24,26 @@
   padding-left: 30%;
 }
 
-.Web{
+.Web {
   padding-left: 20%;
 }
-.Projects{
+.Projects {
   padding-left: 10%;
 }
-.arrow{
+.arrow {
   width: 10px;
   height: 10px;
   object-fit: contain;
   margin-right: 5%;
 }
-.show-menu {  
+.show-menu {
   transform: rotate(90deg);
   width: 10px;
   height: 10px;
   object-fit: contain;
   margin-right: 5%;
 }
-.hide-menu {  
+.hide-menu {
   width: 10px;
   height: 10px;
   object-fit: contain;
@@ -55,4 +57,12 @@
 }
 .NavList p {
   padding-left: 30%;
+}
+@media (max-width: 500px) {
+  .Lbar-wrapper {
+    background-color: rgb(43, 43, 43);
+    height: calc(100% - 8%);
+    width: 100%;
+    padding-top: 45px;
+  }
 }
